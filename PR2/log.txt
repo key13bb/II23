@@ -1,0 +1,33 @@
+cd <project directory>
+git init
+git status
+git branch -m main
+git config --global user.name "Kiko13bb"
+git config --global user.email kiko13bb@gmail.com
+git add pom.xml README.md
+git status
+git add src
+git status
+git log
+git branch develop
+git status
+git commit -am “Update class Calculator with a new method”
+git status
+git checkout main
+git merge develop
+git log
+git checkout develop
+git commit -am “Refactor method divide() in branch develop”
+git checkout main
+git commit -am “Refactor method divide() in branch main”
+git checkout develop
+git merge main
+git commit -am “Resolve conflict in class Calculator”
+git checkout main
+git merge develop
+git log
+git status
+git status
+git add .gitignore
+git commit -am “Add file .gitignore”
+git status

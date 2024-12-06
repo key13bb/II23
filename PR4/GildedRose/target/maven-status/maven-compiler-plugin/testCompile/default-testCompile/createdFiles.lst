@@ -1,0 +1,11 @@
+com/gildedrose/refactored/GildedRoseTest$TestCasesForSulfuras.class
+com/gildedrose/original/GildedRoseTest$TestCasesForSulfuras.class
+com/gildedrose/original/GildedRoseTest.class
+com/gildedrose/refactored/GildedRoseTest$TestCasesForBackstagePass.class
+com/gildedrose/original/GildedRoseTest$TestCasesForBrie.class
+com/gildedrose/refactored/GildedRoseTest.class
+com/gildedrose/refactored/GildedRoseTest$TestCasesForBrie.class
+com/gildedrose/refactored/GildedRoseTest$TestCasesForRegularItems.class
+com/gildedrose/original/GildedRoseTest$TestCasesForRegularItems.class
+com/gildedrose/original/GildedRoseTest$TestCasesForBackstagePass.class
+com/gildedrose/refactored/ItemTest.class

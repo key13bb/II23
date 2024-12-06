@@ -1,0 +1,10 @@
+Linea 52:	Sustituir ambos términos por 0.
+Linea 47:	Crear constante y sustituir String
+Linea 45:	Crear constante y sustituir String
+Linea 39:	Crear constante y sustituir String
+Linea 30:	Juntar ambas condiciones en un sólo if
+Linea 24:	Juntar ambas condiciones en un sólo if
+Linea 23:	Crear constante y sustituir String
+Linea 15:	Crear constante y sustituir String
+Linea 13:	Crear constante y sustituir String
+Todas las líneas se refieren a las del código original.

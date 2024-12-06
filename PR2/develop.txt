@@ -1,0 +1,30 @@
+commit eaccab737486c9639f3a6211908387514c69eeec
+Merge: f82dec4 e1a0e1c
+Author: Kiko13bb <kiko13bb@gmail.com>
+Date:   Fri Mar 8 13:18:47 2024 +0100
+
+    Resolve conflict in class Calculator
+
+commit e1a0e1cbdfc116b7a0904afe2b2cf0ab85998d29
+Author: Kiko13bb <kiko13bb@gmail.com>
+Date:   Fri Mar 8 13:17:55 2024 +0100
+
+    Refactor method divide() in branch main
+
+commit f82dec4ec1714b3d9a85f1ab67096e6fcdd4ae35
+Author: Kiko13bb <kiko13bb@gmail.com>
+Date:   Fri Mar 8 13:16:22 2024 +0100
+
+    Refactor method divide() in branch develop
+
+commit a29a4de5d7e31f87e26ce6993044182862109274
+Author: Kiko13bb <kiko13bb@gmail.com>
+Date:   Fri Mar 8 13:13:17 2024 +0100
+
+    Update class Calculator with a new method
+
+commit e63a30f78d963893b13db5e1387b9617763c6112
+Author: Kiko13bb <kiko13bb@gmail.com>
+Date:   Fri Mar 8 13:08:40 2024 +0100
+
+    Initial
