@@ -1,0 +1,62 @@
+"Nombre: Francisco Bravo Bravo";
+"DNI: 32898935B";
+"Grado / Grupo: Ingenieria informática A";
+
+/* Ejercicio 1 */
+/* Definir la ecuación */
+eq: 222 = x*5 + y*2 + a + b;
+
+/* Definir las restricciones */
+restricciones: [x > 0, y > 0, a > 0, a < 5, b > 0, b < 2];
+
+/* Resolver la ecuación con las restricciones */
+soluciones: solve([eq, restricciones], [x, y, a, b]);
+
+/* Mostrar las soluciones */
+soluciones;
+
+/************************************************************/
+
+/* Ejercicio 2 */
+/* Definir el número a factorizar */
+n: 13911888445;
+
+/* Encontrar los factores primos */
+factores_primos: factor(n);
+
+/* Extraer los factores primos */
+factores: listify(factores_primos);
+
+/* Generar todas las combinaciones de 4 factores */
+combinaciones: setify(cartesian_product(factores, factores, factores, factores));
+
+/* Filtrar combinaciones que multiplican a n */
+factorizaciones: [c for c in combinaciones if apply("*", c) = n and length(setify(c)) = 4];
+
+/* Mostrar las factorizaciones */
+factorizaciones;
+
+
+
+/* Ejercicio 3 */
+/* Definir la ecuación en recurrencia */
+eq: a[n] = 2*a[n-1] + 3*a[n-2] + (-1)^n;
+
+/* Definir las condiciones iniciales */
+a0: 0;
+a1: 7;
+
+/* Crear una lista para almacenar los valores de la secuencia */
+a: makelist(0, i, 0, 20);
+
+/* Asignar las condiciones iniciales */
+a[0]: a0;
+a[1]: a1;
+
+/* Calcular los valores de la secuencia usando la ecuación en recurrencia */
+for n: 2 thru 20 do (
+    a[n]: 2*a[n-1] + 3*a[n-2] + (-1)^n
+);
+
+/* Mostrar los primeros 20 valores de la secuencia */
+a;
