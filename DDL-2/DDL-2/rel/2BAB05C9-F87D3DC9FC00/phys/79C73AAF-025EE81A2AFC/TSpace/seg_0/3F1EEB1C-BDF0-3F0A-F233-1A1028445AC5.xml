@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="TS_ALUMNOS" directorySegmentName="seg_0" id="3F1EEB1C-BDF0-3F0A-F233-1A1028445AC5">
+<sourceConnName>UMA</sourceConnName>
+<sourceObjSchema>UBD1006</sourceObjSchema>
+<sourceObjName>TS_ALUMNOS</sourceObjName>
+<createdBy>key13bb</createdBy>
+<createdTime>2024-10-31 21:41:46 UTC</createdTime>
+<ownerDesignName>DDL-2</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

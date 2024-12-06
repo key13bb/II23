@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="COMPATIBLE_APLICACIONES_NOMBRE_APLIC_FK" directorySegmentName="seg_0" id="C2E156C9-3461-FFA7-31DA-5E901B390D26">
+<createdBy>key13bb</createdBy>
+<createdTime>2024-10-31 21:41:58 UTC</createdTime>
+<generatorID>76BB418A-1A08-1155-8D39-2383D3C43634</generatorID>
+<ownerDesignName>DDL-2</ownerDesignName>
+<engineerTo>
+<item key="2BAB05C9-FD69-239E-DA68-F87D3DC9FC00" value="true"/>
+</engineerTo>
+<sourcePk>0DEBE290-53BD-7724-3EDF-90F87026226A</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>729EE367-2380-6A17-D223-EF95390701FD</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2E5F9183-5218-BC8B-A90A-A9BD603564CD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

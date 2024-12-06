@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="94BCD8B4-81AC-8417-7FC5-293AD9FF8256" name="ATRIBUTO">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>E03B9EB6-1B45-6103-09A4-6CFD4D391387</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NOMBRE" id="45740969-7049-0D0B-4A9D-A1CAFE2A084B">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:46:03 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CUENTA" id="0FDE46C4-6ED6-237E-1AA9-BD36BEFC89DC">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>C023ACDE-E6A8-43FC-BDB7-ACD839404CFF</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>DDE2AE6D-D073-4010-D6CA-2DBF85096C93</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7C9E1BA7-13B4-34AE-72CA-4781186A0FC4" name="ATRIBUTO PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:46:24 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>45740969-7049-0D0B-4A9D-A1CAFE2A084B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

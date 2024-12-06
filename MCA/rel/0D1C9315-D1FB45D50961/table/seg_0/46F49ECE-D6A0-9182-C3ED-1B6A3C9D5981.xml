@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="46F49ECE-D6A0-9182-C3ED-1B6A3C9D5981" name="USUARIO_CUENTA_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:59 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CUENTA_NOMBRE" id="B1EE1CF0-BC1C-3CE1-9B8A-968CF810709F">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:59 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CE694BA9-9C7B-EAAD-1927-7210D02B629A" referredColumn="5949F34C-8FEA-FDFF-2848-FBBF908C508F"/>
+</associations>
+</Column>
+<Column name="USUARIO_CORREO" id="FE29564A-FCD3-E799-983E-4DC6458FC97A">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:59 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE52EF06-5E29-4AB0-A118-ED4D1BA0BEF1" referredColumn="855FF12C-9009-31BF-707C-FBEFDD3DC074"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0ECB655-8734-5A5E-CE0B-6B4E7AF563B1" name="USUARIO_CUENTA_FK_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:59 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1EE1CF0-BC1C-3CE1-9B8A-968CF810709F"/>
+<colUsage columnID="FE29564A-FCD3-E799-983E-4DC6458FC97A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71CD8152-2F53-21D9-4E6B-ED1D6C345798" name="USUARIO_CUENTA_FK_CUENTA_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:59 UTC</createdTime>
+<generatorID>A77ECA06-1A32-50DF-3414-6BCE72F1F392</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1EE1CF0-BC1C-3CE1-9B8A-968CF810709F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD9DA89C-8A02-BF15-A64B-BC4DDBE27067" name="USUARIO_CUENTA_FK_USUARIO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:59 UTC</createdTime>
+<generatorID>A77ECA06-1A32-50DF-3414-6BCE72F1F392</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE29564A-FCD3-E799-983E-4DC6458FC97A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

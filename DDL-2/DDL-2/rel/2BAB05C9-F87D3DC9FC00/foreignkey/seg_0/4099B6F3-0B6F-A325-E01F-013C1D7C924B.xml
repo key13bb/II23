@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4099B6F3-0B6F-A325-E01F-013C1D7C924B" containerWithKeyObject="C2D6E3B9-F92D-5610-CA2E-82825B441B7F" localFKIndex="67C60465-E817-D656-0129-4E73C63025B3" name="PAGINA_DOC_TEXTO_NOMBRE_DIRECTORIO_FK">
+<sourceConnName>UMA</sourceConnName>
+<sourceObjSchema>UBD1006</sourceObjSchema>
+<sourceObjName>PAGINA_DOC_TEXTO_NOMBRE_DIRECTORIO_FK</sourceObjName>
+<createdBy>key13bb</createdBy>
+<createdTime>2024-10-31 21:41:50 UTC</createdTime>
+<ownerDesignName>DDL-2</ownerDesignName>
+<referredTableLongName>UBD1006.DOC_TEXTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E126CE81-BA79-23BD-C482-A2BBE3CBC79B</referredTableID>
+<keyObject>570160BC-5FF9-EBAC-6789-E707FC2BA5AD</keyObject>
+<referredKeyID>570160BC-5FF9-EBAC-6789-E707FC2BA5AD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>NOMBRE,DIRECTORIO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

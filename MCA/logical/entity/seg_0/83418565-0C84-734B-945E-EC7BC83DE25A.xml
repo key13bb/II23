@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="83418565-0C84-734B-945E-EC7BC83DE25A" name="DEFINIDO">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>1E8CF6FF-3F60-F242-0422-F9DBCBB5E99F</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CONTENIDO" id="E5DD51EF-EE16-26E9-0832-B451CFF9483D">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>4F5DC712-1CF3-10BA-67AB-59D612F78C9C</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GTIN" id="8B101BAF-8889-9CBE-F490-2C02325C0C4B">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:03:50 UTC</createdTime>
+<generatorID>D708B5ED-55BC-638B-7D15-B17051860451</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>021177AC-122A-6FF7-771C-A15E1CA6F8CF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="D402FF39-3DE9-A61F-E810-F2F015D5C3B5">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-15 11:04:11 UTC</createdTime>
+<generatorID>374E2131-08DF-B64D-A6F2-54FE54E6E6CB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>45740969-7049-0D0B-4A9D-A1CAFE2A084B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

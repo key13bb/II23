@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PROPIETARIO_CUENTA_FK" directorySegmentName="seg_0" id="F0295A13-F473-551E-A413-C064F6AE4EF1">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>2028A212-DEFA-54EB-C533-717305B6A333</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<sourcePk>F1C23A73-B459-C813-E00E-5AB9621E0BA0</sourcePk>
+<targetPk>D2BA237F-E4E3-8B70-2AF6-AFD576D6E70B</targetPk>
+<dominantRole>2CF52770-2996-D1BE-9250-5A651473D2C1</dominantRole>
+<identifying>false</identifying>
+<nameOnSource>es administrada por</nameOnSource>
+<nameOnTarget>administra una</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2CF52770-2996-D1BE-9250-5A651473D2C1</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>5A901603-AAD4-44FE-0098-5F04B4141C08</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

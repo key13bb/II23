@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="76BB418A-1A08-1155-8D39-2383D3C43634" containerWithKeyObject="F76BFB4F-A625-E333-DD83-F3B4584E7C01" localFKIndex="B5433CB3-BC1D-EE1F-733F-C78165BE9868" name="COMPATIBLE_APLICACIONES_NOMBRE_APLIC_FK">
+<sourceConnName>UMA</sourceConnName>
+<sourceObjSchema>UBD1006</sourceObjSchema>
+<sourceObjName>COMPATIBLE_APLICACIONES_NOMBRE_APLIC_FK</sourceObjName>
+<createdBy>key13bb</createdBy>
+<createdTime>2024-10-31 21:41:50 UTC</createdTime>
+<ownerDesignName>DDL-2</ownerDesignName>
+<referredTableLongName>UBD1006.APLICACIONES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1CF987B2-B626-AD20-CEE9-D2922C72B02E</referredTableID>
+<keyObject>26D90F1A-603D-BD23-4D03-A15D9EAF33BF</keyObject>
+<referredKeyID>26D90F1A-603D-BD23-4D03-A15D9EAF33BF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>NOMBRE_APLIC</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CUENTA_PLAN_FK" directorySegmentName="seg_0" id="ECC69C18-8E27-15D3-0363-16E9E2C67412">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:31:46 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<sourcePk>F1C23A73-B459-C813-E00E-5AB9621E0BA0</sourcePk>
+<targetPk>E51D5822-EF95-11F5-E2D6-E26EBEE7627B</targetPk>
+<identifying>false</identifying>
+<nameOnSource>tiene un</nameOnSource>
+<nameOnTarget>es una opcion para una</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2CF52770-2996-D1BE-9250-5A651473D2C1</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>FAD9BC11-B33E-3B5B-22E5-0ED048CB2FFB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CUENTA_PAGO_FKv1" directorySegmentName="seg_0" id="CB42ADC6-B45C-1FD2-27E4-01AE465E688B">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>9D32284C-502E-C2E4-33FF-F37A094261CF</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<sourcePk>D2BA237F-E4E3-8B70-2AF6-AFD576D6E70B</sourcePk>
+<dominantRole>5A901603-AAD4-44FE-0098-5F04B4141C08</dominantRole>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5A901603-AAD4-44FE-0098-5F04B4141C08</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2CF52770-2996-D1BE-9250-5A651473D2C1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

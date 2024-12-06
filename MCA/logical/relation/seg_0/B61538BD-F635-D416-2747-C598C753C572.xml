@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ARCHIVO_CUENTA_FK" directorySegmentName="seg_0" id="B61538BD-F635-D416-2747-C598C753C572">
+<createdBy>key13</createdBy>
+<createdTime>2024-11-14 23:16:01 UTC</createdTime>
+<generatorID>50F9429E-3E3E-9F22-11F4-3D580A563289</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<sourcePk>F1C23A73-B459-C813-E00E-5AB9621E0BA0</sourcePk>
+<targetPk>3D80A32D-5F83-53D6-E113-3AD379377933</targetPk>
+<identifying>false</identifying>
+<nameOnSource>puede tener varios</nameOnSource>
+<nameOnTarget>pertenece a una</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2CF52770-2996-D1BE-9250-5A651473D2C1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>070A4739-5A61-8150-F349-FC6AA0479961</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
