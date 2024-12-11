@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0AF8F66E-1E89-72E0-0B12-3EFBE3F43720" name="PROPIETARIO">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>5A901603-AAD4-44FE-0098-5F04B4141C08</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CORREO" id="EDAF4B0A-AEA0-CAA2-7A3F-B4F31C44B6B9">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>71E01CE8-CAF2-BD8E-ED68-C965D637CCBB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF9AA305-8F83-49FE-D110-FB039C0E0E59" referredColumn="C5CC08F9-7A08-FFAC-27ED-2EEAFE016644"/>
+</associations>
+</Column>
+<Column name="PAGO_TARJETA" id="6D87CFC4-9D13-20FC-93D0-70974856EF8E">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>580A9C67-8764-7F00-834B-C6537612CB1B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="507E2172-893B-5A8D-A186-8B4308648081" referredColumn="36B9E5B5-B79D-FD73-A182-7E5338C238D6"/>
+</associations>
+</Column>
+<Column name="CUENTA_NOMBRE" id="260567DE-1DE1-FD72-77C2-7830669452D1">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>C65D015A-7122-5D60-DE32-74058224F23E</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E748AA7-6CA2-72D2-C573-B1E0468C55C1" referredColumn="95ABEB04-D51F-A6A6-6A52-25712B3ECD21"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="08EEBC0C-2B50-582D-AD38-751E81B37E8A" name="PROPIETARIO_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>D9F467D5-1177-A8C9-79D5-40907AEDC4C3</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDAF4B0A-AEA0-CAA2-7A3F-B4F31C44B6B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4956461-AB58-7222-7A4C-FFD02E791048" name="PROPIETARIO_PKv1">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>D2BA237F-E4E3-8B70-2AF6-AFD576D6E70B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="9A8B092A-17B9-F1CA-99AA-CEC544477CAE" name="PROPIETARIO__IDX">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F0295A13-F473-551E-A413-C064F6AE4EF1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="260567DE-1DE1-FD72-77C2-7830669452D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7825930A-C9FE-A997-73D9-4039CD671028" name="PROPIETARIO__IDXv1">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>81422830-D0F2-34D5-E690-2AE5B211E5A5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="6D87CFC4-9D13-20FC-93D0-70974856EF8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D3F14B3A-58D8-5DA5-AC71-111809E6F427" name="PROPIETARIO_USUARIO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>838FADD9-3B33-A35A-11B1-64DA32CA20B5</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDAF4B0A-AEA0-CAA2-7A3F-B4F31C44B6B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2AFAA38B-BC61-13CB-A0C7-9803036EADCF" name="PROPIETARIO_CUENTA_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>F0295A13-F473-551E-A413-C064F6AE4EF1</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="260567DE-1DE1-FD72-77C2-7830669452D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1730AFB-20C2-766C-AB75-EC6800832620" name="PROPIETARIO_PAGO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>81422830-D0F2-34D5-E690-2AE5B211E5A5</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D87CFC4-9D13-20FC-93D0-70974856EF8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

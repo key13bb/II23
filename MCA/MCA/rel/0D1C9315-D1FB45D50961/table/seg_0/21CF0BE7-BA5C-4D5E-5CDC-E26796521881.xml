@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21CF0BE7-BA5C-4D5E-5CDC-E26796521881" name="CATEGORIA_PROD">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>BE0B44DE-B63B-90E5-8646-6C6891DF94C2</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTO_GTIN" id="2A7CDFE3-D7E6-AE58-313D-999ADA745B0D">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>52A2EFD7-CC07-9A2B-F473-9F905ABA7AAE</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BC43C4E2-3FB2-DD99-8838-2EC4688223B8" referredColumn="941B3944-53F2-BD5B-46F1-2101303A791F"/>
+</associations>
+</Column>
+<Column name="NOMBRE" id="04317E2E-B967-937D-2C13-DDB0C04185F4">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>F02CD328-32D3-B2B3-0A6F-812FF8E4A1F6</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="19959DD7-0C77-6022-ECF4-DB9E2FEB0422" name="CATEGORIA_PROD_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>DF5416AD-F02F-245B-371B-18AE2921FA6B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04317E2E-B967-937D-2C13-DDB0C04185F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24763F8D-F06E-E200-A16A-E703FCF186C1" name="CATEGORIA_PROD_PRODUCTO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>BFBEF3B9-70A4-0A36-6153-3E595671F0B4</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A7CDFE3-D7E6-AE58-313D-999ADA745B0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -29,6 +29,19 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="VALOR" id="EC2B1846-A84B-9E01-8004-756998494200">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:25:08 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="CUENTA" id="0FDE46C4-6ED6-237E-1AA9-BD36BEFC89DC">
 <createdBy>key13</createdBy>
 <createdTime>2024-11-14 23:16:01 UTC</createdTime>
@@ -42,7 +55,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>300 CHAR</dataTypeSize>
-<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GTIN" id="48183882-6572-7903-3519-B05BC8E90F25">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:26:05 UTC</createdTime>
+<generatorID>802E5FDD-B86D-192F-DA82-7DF3AAE306B5</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>021177AC-122A-6FF7-771C-A15E1CA6F8CF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

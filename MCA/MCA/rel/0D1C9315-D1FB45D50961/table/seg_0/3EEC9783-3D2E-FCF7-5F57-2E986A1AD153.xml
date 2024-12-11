@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3EEC9783-3D2E-FCF7-5F57-2E986A1AD153" name="GALERIA">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>BF34DAFF-F0DD-3B23-ECC4-874644E816C8</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOMBRE" id="23B2D98A-7C23-8E1B-6F52-6D6432C1C2CE">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>45740969-7049-0D0B-4A9D-A1CAFE2A084B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29702A1F-6C8D-AD3A-C0AB-160A2BBD6849" referredColumn="25173D65-F0F0-88A4-581E-ECFC18550F15"/>
+</associations>
+</Column>
+<Column name="ETIQUETA" id="44843F5B-A30F-E329-3631-4D31CCE9D192">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>89B7C598-39FF-3E7F-BDC6-362E218EA758</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGEN" id="E3DE6ED2-1716-7D00-E9E2-4CA239E785A2">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>D2B7B284-7C2D-CE8B-24E3-765D63C43525</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="471A23A8-6678-D4D4-C400-B3C57A1F7B02" name="GALERIA_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>7C9E1BA7-13B4-34AE-72CA-4781186A0FC4</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23B2D98A-7C23-8E1B-6F52-6D6432C1C2CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0E8EF5E-82EF-1F9E-C687-5E5E282A825A" name="GALERIA_ETIQUETA_IMAGEN_UN">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>398D4905-0D69-84C2-E5DA-3DD36FB46690</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44843F5B-A30F-E329-3631-4D31CCE9D192"/>
+<colUsage columnID="E3DE6ED2-1716-7D00-E9E2-4CA239E785A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5EBB81D-AE8C-EDAC-F541-F74F61832321" name="GALERIA_ATRIBUTO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>22BC0AB9-9F91-CD6B-BE77-1CC53852DFA5</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23B2D98A-7C23-8E1B-6F52-6D6432C1C2CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

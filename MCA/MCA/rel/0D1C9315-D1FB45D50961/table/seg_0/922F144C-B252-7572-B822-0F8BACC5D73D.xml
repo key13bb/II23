@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="922F144C-B252-7572-B822-0F8BACC5D73D" name="CATEGORIA_ASS">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>CB220C2B-C973-FEF9-BA8F-0E0A43B1C860</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOMBRE" id="FA8E2D61-15B9-F6EB-5EAC-965D16FB58C0">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>3390B6A4-20DC-C9FB-06F6-402B06E0BB4D</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASSET_URL" id="49A13E82-2386-1D55-2BB9-DEEEC904E3FA">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>A6FF5BE2-CC34-D665-CC6F-1491A53DA8A8</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E409ABB3-5312-9392-F184-AAD87F371A56" referredColumn="A545BB6B-7325-4D4E-F31C-4D87EBC05CF1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EAA4520E-D3C4-A81F-5C07-D1025608707C" name="CATEGORIA_ASS_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>F237A280-7BB2-4EF6-0B5B-C0AB84663EE4</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA8E2D61-15B9-F6EB-5EAC-965D16FB58C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DCD72BF7-89B5-61AC-366D-2D8621439B45" name="CATEGORIA_ASS_ASSET_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>F4B8A07A-7988-A6E7-5D9B-E4AA19151C1A</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49A13E82-2386-1D55-2BB9-DEEEC904E3FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

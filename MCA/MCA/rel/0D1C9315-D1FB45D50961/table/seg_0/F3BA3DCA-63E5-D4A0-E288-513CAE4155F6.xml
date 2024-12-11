@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3BA3DCA-63E5-D4A0-E288-513CAE4155F6" name="USUARIO">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>5A1F5DD4-94FD-FF93-EE6C-01C54E25BEDE</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CORREO" id="C5CC08F9-7A08-FFAC-27ED-2EEAFE016644">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>71E01CE8-CAF2-BD8E-ED68-C965D637CCBB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="1CED2326-69F7-A38C-119B-6284C69B14CC">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>9D3AB3BB-1F77-1FE4-CB66-F045E4D2234C</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AVATAR" id="59EEFEF2-82A7-E273-8A78-20FEF03D94DE">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>71540472-D92E-4850-790C-A35444233C73</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANAL_URL" id="36F2BB12-01F3-52A2-2F79-1E29CCA4A8C2">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>6ABEF8CB-1978-3A25-8E08-E8AC0DC708FB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5BFB0571-60C7-ECFF-51BD-2F033B236715" referredColumn="1B624808-964D-5EA5-BD7D-732EA26EC433"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB5CF498-0E07-3F91-A085-247537041976" name="USUARIO_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>D9F467D5-1177-A8C9-79D5-40907AEDC4C3</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5CC08F9-7A08-FFAC-27ED-2EEAFE016644"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8001A0B2-F1BF-61FA-824B-31CBB38CCBAF" name="USUARIO_CANAL_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>9F6A68EF-A82A-A9B0-9AFC-39273CF49BE6</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36F2BB12-01F3-52A2-2F79-1E29CCA4A8C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

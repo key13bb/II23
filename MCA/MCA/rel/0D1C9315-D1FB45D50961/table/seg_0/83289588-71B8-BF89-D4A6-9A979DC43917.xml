@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="83289588-71B8-BF89-D4A6-9A979DC43917" name="ASSET">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>070A4739-5A61-8150-F349-FC6AA0479961</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTO_GTIN" id="AD29BA04-E137-858C-FF22-D4F9A2F8503B">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>3EF200EC-BC27-C95B-95FB-A012CFAE849A</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D57C1C03-C4BE-2091-A785-041619F5EABA" referredColumn="941B3944-53F2-BD5B-46F1-2101303A791F"/>
+</associations>
+</Column>
+<Column name="URL" id="A545BB6B-7325-4D4E-F31C-4D87EBC05CF1">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>48C62EC3-243F-27F1-5863-FED1C1236988</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUENTA_NOMBRE" id="69C00E34-3001-6CE0-0B5B-2C71F57EDC5C">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>48952EC9-17C7-1D5D-EDE8-CA8A997A0E54</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AAF7017D-2721-D3B6-3B9E-98E48729874A" referredColumn="95ABEB04-D51F-A6A6-6A52-25712B3ECD21"/>
+</associations>
+</Column>
+<Column name="NOMBRE" id="ABF2FAD2-B413-5FA8-3466-75EC08D79A38">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>0EF181E2-16C6-3FC3-94C8-1D20F9A0249B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="38E41F58-86FA-7C30-B929-C42BEFE64FA6" name="ASSET_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>3D80A32D-5F83-53D6-E113-3AD379377933</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A545BB6B-7325-4D4E-F31C-4D87EBC05CF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="035496C9-6060-DEF9-CAD9-56078813B9B0" name="ASSET_CUENTA_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>B61538BD-F635-D416-2747-C598C753C572</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69C00E34-3001-6CE0-0B5B-2C71F57EDC5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75F2AF7B-9156-5CC6-3787-6B8B4839E84C" name="ASSET_PRODUCTO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>FFD31D8A-9C62-A578-418F-006001E3C431</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD29BA04-E137-858C-FF22-D4F9A2F8503B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -30,7 +30,7 @@
 <dataTypeSize>300 CHAR</dataTypeSize>
 <ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CREACION" id="0594BA32-32E1-683E-59EB-3AD18CF2CC93">
+<Attribute name="FECHA_CREACION" id="0594BA32-32E1-683E-59EB-3AD18CF2CC93">
 <createdBy>key13</createdBy>
 <createdTime>2024-11-14 23:16:01 UTC</createdTime>
 <generatorID>F5FF40E4-EAA0-92E3-D2BE-D82A7648F41E</generatorID>
@@ -72,9 +72,9 @@
 <dataTypeSize>500 CHAR</dataTypeSize>
 <ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PLAN" id="0B0BC2CB-6E77-3E7D-45EF-220496582071">
+<Attribute name="PLAN" id="E987BE9A-8E8F-7D77-C8BD-32CDDE2F116A">
 <createdBy>key13</createdBy>
-<createdTime>2024-11-14 23:31:57 UTC</createdTime>
+<createdTime>2024-12-11 10:15:49 UTC</createdTime>
 <generatorID>ECC69C18-8E27-15D3-0363-16E9E2C67412</generatorID>
 <ownerDesignName>MCA</ownerDesignName>
 <engineerTo>
@@ -85,7 +85,22 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE1" id="D6CAE96A-0EEC-5FD3-7B22-F5D8CBE0A4C7">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:15:49 UTC</createdTime>
+<generatorID>ECC69C18-8E27-15D3-0363-16E9E2C67412</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>E9709B90-34E1-CA1D-7340-80DF1C960F2A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

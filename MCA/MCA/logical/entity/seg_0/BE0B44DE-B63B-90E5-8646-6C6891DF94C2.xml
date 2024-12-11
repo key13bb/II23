@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BE0B44DE-B63B-90E5-8646-6C6891DF94C2" name="CATEGORIA">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BE0B44DE-B63B-90E5-8646-6C6891DF94C2" name="CATEGORIA_PROD">
 <createdBy>key13</createdBy>
 <createdTime>2024-11-14 23:16:01 UTC</createdTime>
 <generatorID>527A22E5-1647-0B98-E098-AFEF5A3A3B09</generatorID>
@@ -43,21 +43,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="DIRECCION" id="87387C17-773A-866D-2522-F03D3BDC2593">
-<createdBy>key13</createdBy>
-<createdTime>2024-11-14 23:16:01 UTC</createdTime>
-<generatorID>082ACAE4-8104-D3D0-6AAB-B56C07676C21</generatorID>
-<ownerDesignName>MCA</ownerDesignName>
-<engineerTo>
-<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
-</engineerTo>
-<referedAttribute>48C62EC3-243F-27F1-5863-FED1C1236988</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>1000 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

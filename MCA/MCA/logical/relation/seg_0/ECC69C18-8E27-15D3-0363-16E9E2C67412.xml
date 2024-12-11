@@ -12,7 +12,7 @@
 <nameOnSource>tiene un</nameOnSource>
 <nameOnTarget>es una opcion para una</nameOnTarget>
 <optionalSource>false</optionalSource>
-<optionalTarget>true</optionalTarget>
+<optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>2CF52770-2996-D1BE-9250-5A651473D2C1</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>

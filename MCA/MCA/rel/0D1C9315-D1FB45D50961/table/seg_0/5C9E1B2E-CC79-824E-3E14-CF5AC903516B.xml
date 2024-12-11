@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5C9E1B2E-CC79-824E-3E14-CF5AC903516B" name="CUENTA">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>2CF52770-2996-D1BE-9250-5A651473D2C1</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOMBRE" id="95ABEB04-D51F-A6A6-6A52-25712B3ECD21">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>DDE2AE6D-D073-4010-D6CA-2DBF85096C93</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="12BBA3F0-99A6-E2A1-6933-A0414BC243A8">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>0594BA32-32E1-683E-59EB-3AD18CF2CC93</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALMACENAMIENTO" id="7FAB0A87-007F-56DC-769B-967BF4C405E6">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>5BB33525-AC0B-7C04-1477-D504293CC36B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGO_URL" id="D9C8F55E-3686-D750-5CB1-74922746A867">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>F6DBEB99-1AA4-A352-946A-1B539CB51DB0</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLAN_PLAN" id="FB7D1AD8-CCA4-8B9E-9E5A-BF0AE1CB5755">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>E987BE9A-8E8F-7D77-C8BD-32CDDE2F116A</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FE92977-6D1C-8C1E-3C22-A5137B82B4F2" referredColumn="94263B94-1629-49B7-C3F8-9027C139B88D"/>
+</associations>
+</Column>
+<Column name="PLAN_CUENTA_NOMBRE" id="605F86B7-ACF4-F301-5DC7-840D3F9B9DDE">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>D6CAE96A-0EEC-5FD3-7B22-F5D8CBE0A4C7</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FE92977-6D1C-8C1E-3C22-A5137B82B4F2" referredColumn="25BC9B57-8076-B94D-5345-10E6B1C3CD51"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F5B894AD-2038-53A9-F9BE-3FEBC3574361" name="CUENTA_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>F1C23A73-B459-C813-E00E-5AB9621E0BA0</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95ABEB04-D51F-A6A6-6A52-25712B3ECD21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7900768-608A-82A2-5AFE-AC83525DCF29" name="CUENTA__IDX">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>ECC69C18-8E27-15D3-0363-16E9E2C67412</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="FB7D1AD8-CCA4-8B9E-9E5A-BF0AE1CB5755"/>
+<colUsage columnID="605F86B7-ACF4-F301-5DC7-840D3F9B9DDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD939A41-F2F6-968A-F79A-5B924BA1BF58" name="CUENTA_PROPIETARIO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>CB42ADC6-B45C-1FD2-27E4-01AE465E688B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="6A74B421-D857-4061-B4D7-A602893A93F9" name="CUENTA_PLAN_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 10:54:27 UTC</createdTime>
+<generatorID>ECC69C18-8E27-15D3-0363-16E9E2C67412</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB7D1AD8-CCA4-8B9E-9E5A-BF0AE1CB5755"/>
+<colUsage columnID="605F86B7-ACF4-F301-5DC7-840D3F9B9DDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

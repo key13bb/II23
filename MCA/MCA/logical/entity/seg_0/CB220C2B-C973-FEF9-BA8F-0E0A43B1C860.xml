@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CB220C2B-C973-FEF9-BA8F-0E0A43B1C860" name="CATEGORIA_ASS">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 09:30:16 UTC</createdTime>
+<generatorID>527A22E5-1647-0B98-E098-AFEF5A3A3B09</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NOMBRE" id="3390B6A4-20DC-C9FB-06F6-402B06E0BB4D">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 09:30:16 UTC</createdTime>
+<generatorID>64D5527C-5863-DF44-39E2-708085D686BC</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="URL" id="A6FF5BE2-CC34-D665-CC6F-1491A53DA8A8">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 09:31:50 UTC</createdTime>
+<generatorID>F4B8A07A-7988-A6E7-5D9B-E4AA19151C1A</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>48C62EC3-243F-27F1-5863-FED1C1236988</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F237A280-7BB2-4EF6-0B5B-C0AB84663EE4" name="CATEGORIA PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-11 09:30:16 UTC</createdTime>
+<generatorID>20CD9807-5611-4858-81FC-56A425FFEE04</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3390B6A4-20DC-C9FB-06F6-402B06E0BB4D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

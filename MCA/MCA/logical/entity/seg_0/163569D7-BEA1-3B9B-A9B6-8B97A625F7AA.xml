@@ -71,7 +71,7 @@
 <logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CREACION" id="2F66E498-A5E7-B427-5B3C-DEC1F916859C">
+<Attribute name="FECHA_CREACION" id="2F66E498-A5E7-B427-5B3C-DEC1F916859C">
 <createdBy>key13</createdBy>
 <createdTime>2024-11-14 23:16:01 UTC</createdTime>
 <generatorID>06A0F20C-F131-8892-32C6-41867CE3FB36</generatorID>
@@ -99,7 +99,7 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="MODIFICADO" id="443761A2-0B80-F9ED-A874-7383F1A88310">
+<Attribute name="FECHA_MODIFICADO" id="443761A2-0B80-F9ED-A874-7383F1A88310">
 <createdBy>key13</createdBy>
 <createdTime>2024-11-14 23:16:01 UTC</createdTime>
 <generatorID>24C6923F-39C7-3F53-ACB7-24D7AA171D5B</generatorID>
