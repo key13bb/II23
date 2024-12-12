@@ -50,3 +50,23 @@ db.restaurants.find({
         {"borough": {$ne: "Brooklyn"}}
     ]
 });
+
+// Consulta 12
+db.restaurants.find({
+    $and: [
+        {"borough": "Bronx"},
+        {$or: [
+            {"cuisine": "American "},
+            {"cuisine": "Chinese"}
+            ]
+        }
+    )
+
+// Consulta 13
+db.restaurants.find().sort({name: 1});
+
+// Consulta 14
+db.restaurants.find().sort({name: -1});
+
+// Consulta 15
+db.restaurants.find().sort({cuisine: 1, borough: -1});
