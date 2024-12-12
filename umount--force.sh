@@ -1,5 +1,6 @@
 #!/bin/sh
-
+# Save files in worktrees before being umounted
+sh save.sh
 # Umount all worktrees
 git worktree remove ./1.1/FELE --force
 git worktree remove ./1.1/IPRO --force

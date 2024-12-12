@@ -20,3 +20,6 @@ git worktree add ./2.2/PAV2 2.2/PAV2
 git worktree add ./2.2/RSER 2.2/RSER
 git worktree add ./2.2/SOPE 2.2/SOPE
 git worktree add ./2.2/TALF 2.2/TALF
+
+# Restore all config folders
+sh restore.sh
