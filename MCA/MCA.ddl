@@ -1,203 +1,311 @@
+-- Generado por Oracle SQL Developer Data Modeler 24.3.0.240.1210
+--   en:        2024-12-14 02:46:58 CET
+--   sitio:      Oracle Database 12c
+--   tipo:      Oracle Database 12c
+
+
+
+-- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+
+-- predefined type, no DDL - XMLTYPE
+
 CREATE TABLE agente (
-    cuenta_nombre VARCHAR2(300 CHAR) NOT NULL,
-    correo        VARCHAR2(500 CHAR) NOT NULL
+    correo VARCHAR2(500 CHAR) NOT NULL
 );
 
 ALTER TABLE agente ADD CONSTRAINT agente_pk PRIMARY KEY ( correo );
 
-CREATE TABLE archivo (
-    nombre        VARCHAR2(100 CHAR) NOT NULL,
-    url           VARCHAR2(1000 CHAR) NOT NULL,
-    producto_gtin INTEGER NOT NULL,
-    cuenta_nombre VARCHAR2(300 CHAR) NOT NULL
+ALTER TABLE agente ADD CONSTRAINT agente_uk UNIQUE ( correo );
+
+CREATE TABLE asset (
+    url      VARCHAR2(1000 CHAR) NOT NULL,
+    cuenta   VARCHAR2(300 CHAR) NOT NULL,
+    producto INTEGER NOT NULL,
+    nombre   VARCHAR2(100 CHAR) NOT NULL
 );
 
-ALTER TABLE archivo ADD CONSTRAINT archivo_pk PRIMARY KEY ( producto_gtin,
-                                                            url );
+ALTER TABLE asset ADD CONSTRAINT asset_pk PRIMARY KEY ( url );
 
 CREATE TABLE atributo (
-    nombre        VARCHAR2(250 CHAR),
-    contenido     VARCHAR2(500 CHAR),
-    producto_gtin INTEGER NOT NULL
+    cuenta    VARCHAR2(300 CHAR) NOT NULL,
+    producto  INTEGER NOT NULL,
+    nombre    VARCHAR2(50 CHAR) NOT NULL,
+    numero    NUMBER,
+    texto     VARCHAR2(1000 CHAR),
+    "DECIMAL" NUMBER
 );
 
-ALTER TABLE atributo ADD CONSTRAINT atributo_pk PRIMARY KEY ( producto_gtin );
+ALTER TABLE atributo ADD CONSTRAINT atributo_pk PRIMARY KEY ( nombre,
+                                                              producto );
 
 CREATE TABLE canal (
-    nombre VARCHAR2(100 CHAR) NOT NULL,
     url    VARCHAR2(500 CHAR) NOT NULL,
-    token  VARCHAR2(1000 CHAR) NOT NULL
+    nombre VARCHAR2(100 CHAR) NOT NULL
 );
 
 ALTER TABLE canal ADD CONSTRAINT canal_pk PRIMARY KEY ( url );
 
-CREATE TABLE categoria (
-    nombre                VARCHAR2(100 CHAR) NOT NULL,
-    producto_gtin         INTEGER NOT NULL,
-    archivo_producto_gtin INTEGER NOT NULL,
-    archivo_url           VARCHAR2(1000 CHAR) NOT NULL
+CREATE TABLE categoria_ass (
+    nombre VARCHAR2(100 CHAR) NOT NULL,
+    asset  VARCHAR2(1000 CHAR) NOT NULL
 );
 
-ALTER TABLE categoria
-    ADD CONSTRAINT categoria_pk PRIMARY KEY ( producto_gtin,
-                                              archivo_producto_gtin,
-                                              nombre );
+ALTER TABLE categoria_ass ADD CONSTRAINT categoria_ass_pk PRIMARY KEY ( nombre );
+
+CREATE TABLE categoria_prod (
+    nombre   VARCHAR2(100 CHAR) NOT NULL,
+    producto INTEGER NOT NULL
+);
+
+ALTER TABLE categoria_prod ADD CONSTRAINT categoria_prod_pk PRIMARY KEY ( nombre );
 
 CREATE TABLE cuenta (
-    nombre             VARCHAR2(300 CHAR) NOT NULL,
-    fecha_creacion     TIMESTAMP NOT NULL,
-    logo_url           VARCHAR2(500 CHAR),
-    propietario_correo VARCHAR2(500 CHAR) NOT NULL,
-    pago_tarjeta       VARCHAR2(20 CHAR) NOT NULL,
-    plan               VARCHAR2(10 CHAR) NOT NULL
+    nombre         VARCHAR2(300 CHAR) NOT NULL,
+    plan           VARCHAR2(30) NOT NULL,
+    propietario    VARCHAR2(500 CHAR) NOT NULL,
+    fecha_creacion TIMESTAMP NOT NULL,
+    almacenamiento VARCHAR2(250 CHAR) NOT NULL,
+    logo_url       VARCHAR2(500 CHAR)
 );
-
-CREATE UNIQUE INDEX cuenta__idx ON
-    cuenta (
-        propietario_correo
-    ASC );
 
 ALTER TABLE cuenta ADD CONSTRAINT cuenta_pk PRIMARY KEY ( nombre );
 
-CREATE TABLE galeria (
-    etiqueta VARCHAR2(100 CHAR) NOT NULL,
-    imagen   VARCHAR2(1000 CHAR) NOT NULL,
-    gtin1    INTEGER NOT NULL
+CREATE TABLE cuenta_usuario (
+    cuenta  VARCHAR2(300 CHAR) NOT NULL,
+    usuario VARCHAR2(500 CHAR) NOT NULL
 );
 
-ALTER TABLE galeria ADD CONSTRAINT galeria_pk PRIMARY KEY ( gtin1 );
+ALTER TABLE cuenta_usuario ADD CONSTRAINT cuenta_usuario_pk PRIMARY KEY ( usuario,
+                                                                          cuenta );
 
-ALTER TABLE galeria ADD CONSTRAINT galeria_pkv1 UNIQUE ( etiqueta,
-                                                         imagen );
+CREATE TABLE galeria (
+    nombre   VARCHAR2(50 CHAR) NOT NULL,
+    producto INTEGER NOT NULL,
+    imagen   VARCHAR2(1000) NOT NULL
+);
+
+ALTER TABLE galeria ADD CONSTRAINT galeria_pk PRIMARY KEY ( nombre,
+                                                            producto );
+
+ALTER TABLE galeria ADD CONSTRAINT galeria_uk UNIQUE ( nombre );
 
 CREATE TABLE pago (
+    tarjeta INTEGER NOT NULL,
     nombre  VARCHAR2(100 CHAR),
-    url     VARCHAR2(500 CHAR),
-    tarjeta VARCHAR2(20 CHAR) NOT NULL
+    url     VARCHAR2(500 CHAR)
 );
 
 ALTER TABLE pago ADD CONSTRAINT pago_pk PRIMARY KEY ( tarjeta );
 
+CREATE TABLE plan (
+    nombre              VARCHAR2(30) NOT NULL,
+    sku                 INTEGER NOT NULL,
+    assets              INTEGER NOT NULL,
+    almacenamiento      NUMBER NOT NULL,
+    categorias_producto INTEGER NOT NULL,
+    categorias_assets   INTEGER NOT NULL,
+    relaciones          INTEGER NOT NULL,
+    amazon              NUMBER NOT NULL,
+    precio              NUMBER NOT NULL
+);
+
+ALTER TABLE plan ADD CONSTRAINT plan_pk PRIMARY KEY ( nombre );
+
 CREATE TABLE producto (
-    gtin          INTEGER NOT NULL,
-    sku           VARCHAR2(5 CHAR) NOT NULL,
-    creacion      TIMESTAMP NOT NULL,
-    modificado    TIMESTAMP,
-    img_principal BLOB,
-    cuenta_nombre VARCHAR2(300 CHAR) NOT NULL
+    gtin             INTEGER NOT NULL,
+    sku              VARCHAR2(15 CHAR) NOT NULL,
+    cuenta           VARCHAR2(300 CHAR) NOT NULL,
+    fecha_creacion   TIMESTAMP NOT NULL,
+    fecha_modificado TIMESTAMP,
+    descripcion      VARCHAR2(100 CHAR),
+    thumbnail        VARCHAR2(500 CHAR)
 );
 
 ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( gtin );
 
+ALTER TABLE producto ADD CONSTRAINT producto_sku_uk UNIQUE ( sku );
+
 CREATE TABLE propietario (
-    cuenta_nombre VARCHAR2(300 CHAR) NOT NULL,
-    correo        VARCHAR2(500 CHAR) NOT NULL
+    correo VARCHAR2(500 CHAR) NOT NULL,
+    pago   INTEGER NOT NULL
 );
 
 CREATE UNIQUE INDEX propietario__idx ON
     propietario (
-        cuenta_nombre
+        pago
     ASC );
 
 ALTER TABLE propietario ADD CONSTRAINT propietario_pk PRIMARY KEY ( correo );
 
-CREATE TABLE relacion (
-    archivo_gtin   INTEGER NOT NULL,
-    producto_gtin  INTEGER NOT NULL,
-    producto_gtin2 INTEGER NOT NULL,
-    es_similar     CHAR(1) NOT NULL,
-    archivo_url    VARCHAR2(1000 CHAR) NOT NULL
+ALTER TABLE propietario ADD CONSTRAINT propietario_uk UNIQUE ( correo );
+
+CREATE TABLE relacionado (
+    producto1 INTEGER NOT NULL,
+    producto2 INTEGER NOT NULL
 );
 
-ALTER TABLE relacion
-    ADD CONSTRAINT relacion_pk PRIMARY KEY ( producto_gtin,
-                                             producto_gtin2,
-                                             archivo_gtin );
+ALTER TABLE relacionado ADD CONSTRAINT relacionado_pk PRIMARY KEY ( producto1,
+                                                                    producto2 );
+
+CREATE TABLE similar (
+    producto1 INTEGER NOT NULL,
+    producto2 INTEGER NOT NULL
+);
+
+ALTER TABLE similar ADD CONSTRAINT similar_pk PRIMARY KEY ( producto1,
+                                                            producto2 );
+
+CREATE TABLE token (
+    cuenta VARCHAR2(300 CHAR) NOT NULL,
+    canal  VARCHAR2(500 CHAR) NOT NULL,
+    token  VARCHAR2(100 CHAR) NOT NULL
+);
+
+ALTER TABLE token ADD CONSTRAINT token_pk PRIMARY KEY ( canal,
+                                                        cuenta );
 
 CREATE TABLE usuario (
-    nombre        VARCHAR2(250 CHAR) NOT NULL,
-    correo        VARCHAR2(500 CHAR) NOT NULL,
-    avatar        VARCHAR2(500 CHAR),
-    cuenta_nombre VARCHAR2(300 CHAR) NOT NULL,
-    canal_url     VARCHAR2(500 CHAR) NOT NULL
+    correo VARCHAR2(500 CHAR) NOT NULL,
+    nombre VARCHAR2(250 CHAR) NOT NULL,
+    passwd VARCHAR2(64 CHAR) NOT NULL,
+    avatar VARCHAR2(500 CHAR)
 );
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( correo );
 
 ALTER TABLE agente
-    ADD CONSTRAINT agente_cuenta_fk FOREIGN KEY ( cuenta_nombre )
-        REFERENCES cuenta ( nombre );
-
-ALTER TABLE agente
     ADD CONSTRAINT agente_usuario_fk FOREIGN KEY ( correo )
         REFERENCES usuario ( correo );
 
-ALTER TABLE archivo
-    ADD CONSTRAINT archivo_cuenta_fk FOREIGN KEY ( cuenta_nombre )
+ALTER TABLE asset
+    ADD CONSTRAINT asset_cuenta_fk FOREIGN KEY ( cuenta )
         REFERENCES cuenta ( nombre );
 
-ALTER TABLE archivo
-    ADD CONSTRAINT archivo_producto_fk FOREIGN KEY ( producto_gtin )
+ALTER TABLE asset
+    ADD CONSTRAINT asset_producto_fk FOREIGN KEY ( producto )
         REFERENCES producto ( gtin );
 
 ALTER TABLE atributo
-    ADD CONSTRAINT atributo_producto_fk FOREIGN KEY ( producto_gtin )
+    ADD CONSTRAINT atributo_cuenta_fk FOREIGN KEY ( cuenta )
+        REFERENCES cuenta ( nombre );
+
+ALTER TABLE atributo
+    ADD CONSTRAINT atributo_producto_fk FOREIGN KEY ( producto )
         REFERENCES producto ( gtin );
 
-ALTER TABLE categoria
-    ADD CONSTRAINT categoria_archivo_fk
-        FOREIGN KEY ( archivo_producto_gtin,
-                      archivo_url )
-            REFERENCES archivo ( producto_gtin,
-                                 url );
+ALTER TABLE categoria_ass
+    ADD CONSTRAINT categoria_ass_asset_fk FOREIGN KEY ( asset )
+        REFERENCES asset ( url );
 
-ALTER TABLE categoria
-    ADD CONSTRAINT categoria_producto_fk FOREIGN KEY ( producto_gtin )
+ALTER TABLE categoria_prod
+    ADD CONSTRAINT categoria_producto_fk FOREIGN KEY ( producto )
         REFERENCES producto ( gtin );
 
 ALTER TABLE cuenta
-    ADD CONSTRAINT cuenta_pago_fk FOREIGN KEY ( pago_tarjeta )
-        REFERENCES pago ( tarjeta );
+    ADD CONSTRAINT cuenta_plan_fk FOREIGN KEY ( plan )
+        REFERENCES plan ( nombre );
 
 ALTER TABLE cuenta
-    ADD CONSTRAINT cuenta_propietario_fk FOREIGN KEY ( propietario_correo )
+    ADD CONSTRAINT cuenta_propietario_fk FOREIGN KEY ( propietario )
         REFERENCES propietario ( correo );
 
+ALTER TABLE cuenta_usuario
+    ADD CONSTRAINT cuenta_usuario_cuenta_fk FOREIGN KEY ( cuenta )
+        REFERENCES cuenta ( nombre );
+
+ALTER TABLE cuenta_usuario
+    ADD CONSTRAINT cuenta_usuario_usuario_fk FOREIGN KEY ( usuario )
+        REFERENCES usuario ( correo );
+
 ALTER TABLE galeria
-    ADD CONSTRAINT galeria_atributo_fk FOREIGN KEY ( gtin1 )
-        REFERENCES atributo ( producto_gtin );
+    ADD CONSTRAINT galeria_asset_fk FOREIGN KEY ( imagen )
+        REFERENCES asset ( url );
+
+ALTER TABLE galeria
+    ADD CONSTRAINT galeria_atributo_fk
+        FOREIGN KEY ( nombre,
+                      producto )
+            REFERENCES atributo ( nombre,
+                                  producto );
 
 ALTER TABLE producto
-    ADD CONSTRAINT producto_cuenta_fk FOREIGN KEY ( cuenta_nombre )
+    ADD CONSTRAINT producto_cuenta_fk FOREIGN KEY ( cuenta )
         REFERENCES cuenta ( nombre );
 
 ALTER TABLE propietario
-    ADD CONSTRAINT propietario_cuenta_fk FOREIGN KEY ( cuenta_nombre )
-        REFERENCES cuenta ( nombre );
+    ADD CONSTRAINT propietario_pago_fk FOREIGN KEY ( pago )
+        REFERENCES pago ( tarjeta );
 
 ALTER TABLE propietario
     ADD CONSTRAINT propietario_usuario_fk FOREIGN KEY ( correo )
         REFERENCES usuario ( correo );
 
-ALTER TABLE relacion
-    ADD CONSTRAINT relacion_archivo_fk
-        FOREIGN KEY ( archivo_gtin,
-                      archivo_url )
-            REFERENCES archivo ( producto_gtin,
-                                 url );
-
-ALTER TABLE relacion
-    ADD CONSTRAINT relacion_producto_fk FOREIGN KEY ( producto_gtin )
+ALTER TABLE relacionado
+    ADD CONSTRAINT relacionado_producto1_fk FOREIGN KEY ( producto1 )
         REFERENCES producto ( gtin );
 
-ALTER TABLE relacion
-    ADD CONSTRAINT relacion_producto_fkv2 FOREIGN KEY ( producto_gtin2 )
+ALTER TABLE relacionado
+    ADD CONSTRAINT relacionado_producto2_fk FOREIGN KEY ( producto2 )
         REFERENCES producto ( gtin );
 
-ALTER TABLE usuario
-    ADD CONSTRAINT usuario_canal_fk FOREIGN KEY ( canal_url )
+ALTER TABLE similar
+    ADD CONSTRAINT similar_producto1_fk FOREIGN KEY ( producto1 )
+        REFERENCES producto ( gtin );
+
+ALTER TABLE similar
+    ADD CONSTRAINT similar_producto2_fk FOREIGN KEY ( producto2 )
+        REFERENCES producto ( gtin );
+
+ALTER TABLE token
+    ADD CONSTRAINT token_canal_fk FOREIGN KEY ( canal )
         REFERENCES canal ( url );
 
-ALTER TABLE usuario
-    ADD CONSTRAINT usuario_cuenta_fk FOREIGN KEY ( cuenta_nombre )
+ALTER TABLE token
+    ADD CONSTRAINT token_cuenta_fk FOREIGN KEY ( cuenta )
         REFERENCES cuenta ( nombre );
+
+
+
+-- Informe de Resumen de Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                            17
+-- CREATE INDEX                             1
+-- ALTER TABLE                             43
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          0
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- TSDP POLICY                              0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0
