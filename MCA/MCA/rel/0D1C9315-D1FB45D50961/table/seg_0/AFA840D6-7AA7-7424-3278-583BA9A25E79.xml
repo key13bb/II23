@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AFA840D6-7AA7-7424-3278-583BA9A25E79" name="PLAN">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>FAD9BC11-B33E-3B5B-22E5-0ED048CB2FFB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOMBRE" id="D123E46D-B0D1-6A9C-EFD1-5EA199E1E6C6">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>134EFA97-51A6-DE71-3AA6-5BD747A7BD22</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SKU" id="D750F1AD-A127-82BC-FEDF-EE10315393EA">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>1ABC93F0-0EB0-7291-71D8-BCD9571DB21E</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASSETS" id="F41E3B25-0583-BF6E-8A03-BE3635D1A16E">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>D9FF3452-045F-DA5F-30B1-5552D0AF8726</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALMACENAMIENTO" id="13721BA3-844D-32BD-E2C7-BAEB6C49414E">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>EE38061C-93E9-8AB4-9EBF-3209C819B806</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CATEGORIAS_PRODUCTO" id="B2DBF1BE-0813-6118-CC7E-870E0728D067">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>6718F670-1565-46B8-4B68-918FC3811581</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CATEGORIAS_ASSETS" id="D1A8D976-911F-A7CC-AF41-0E2008A9C328">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>763CCA77-6B18-FCE1-2D6F-903BB3C92B5B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RELACIONES" id="B8ABBA90-C771-1AAB-43F4-94DE20F63E2B">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>6025059A-704B-1DB7-D177-875875612EAF</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMAZON" id="E3F0F705-4706-C8CA-9218-71F584B75337">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>D6E6139A-E828-C812-2970-9E646DDAB1C2</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRECIO" id="BBDFBA5C-E35C-7B50-B184-4AB397BE18F5">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>5BF3C1A4-78B5-9B4C-4B02-DE451B573144</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C7E3C1A4-FAE5-E749-EC91-E7F157686760" name="PLAN_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>E51D5822-EF95-11F5-E2D6-E26EBEE7627B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D123E46D-B0D1-6A9C-EFD1-5EA199E1E6C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

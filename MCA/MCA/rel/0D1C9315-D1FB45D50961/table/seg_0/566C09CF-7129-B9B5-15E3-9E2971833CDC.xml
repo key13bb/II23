@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="566C09CF-7129-B9B5-15E3-9E2971833CDC" name="TOKEN">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>E1350397-791C-B2AD-6285-C184AE65A13C</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CUENTA" id="AA5E0B02-8412-9B6E-3068-8F2EE4B74CAA">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>6F431BA3-0768-42F1-C67F-7CED7DDF2973</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7770A300-9302-4B60-7A01-11FC613AAEE6" referredColumn="80176E50-D612-F831-B6E5-CAA67854E237"/>
+</associations>
+</Column>
+<Column name="CANAL" id="F8D5D44D-1858-ED73-5CAD-2488C740B35E">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>4D77E1A9-4DC8-0361-1DFF-C986DD29DA58</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="80071559-3DF0-0697-6B42-B7B34A7B5FAF" referredColumn="AE68D6F4-A1C1-DAE7-ADDB-006EE961069A"/>
+</associations>
+</Column>
+<Column name="TOKEN" id="A8DEEAA4-81F0-43F8-6AFD-D217F61B1E18">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>D6E6BB05-6049-4F6D-B238-C8B608ECFDED</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0789534B-C683-7BC1-B5DF-E3B5E2589B67" name="TOKEN_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>1EA98694-1E25-52C9-7A3C-134329D825BD</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8D5D44D-1858-ED73-5CAD-2488C740B35E"/>
+<colUsage columnID="AA5E0B02-8412-9B6E-3068-8F2EE4B74CAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AECA292E-16D5-993B-F7FD-F298DEBA567F" name="TOKEN_CANAL_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>80BF07A3-E40F-833F-E75E-1A33B518A4AF</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8D5D44D-1858-ED73-5CAD-2488C740B35E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4705AB70-A7BB-EBD1-46CF-CE372CCBB2E2" name="TOKEN_CUENTA_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>B271A86E-264F-D58B-5EFA-926E63469AFA</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA5E0B02-8412-9B6E-3068-8F2EE4B74CAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

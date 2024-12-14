@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6B2AA15-4968-0350-3F9F-E263869A39CF" name="ATRIBUTO">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>94BCD8B4-81AC-8417-7FC5-293AD9FF8256</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CUENTA" id="BF23B1AF-9E9E-2FF8-7F77-4D7E8EECD924">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>0FDE46C4-6ED6-237E-1AA9-BD36BEFC89DC</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29CDC479-EDB1-69E5-67C0-997413CE18D3" referredColumn="80176E50-D612-F831-B6E5-CAA67854E237"/>
+</associations>
+</Column>
+<Column name="PRODUCTO" id="451B5AF5-90D9-D19A-15C8-E48997ECDB1D">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>48183882-6572-7903-3519-B05BC8E90F25</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="00D0FFE2-12E9-6DAA-6C58-A72420D91D17" referredColumn="ED10965E-CC06-2C10-A30C-6E66908576CB"/>
+</associations>
+</Column>
+<Column name="NOMBRE" id="89ECFAA9-976E-EC4E-CE81-3CC3532B8239">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>45740969-7049-0D0B-4A9D-A1CAFE2A084B</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO" id="3E81590D-EFCF-BE62-A582-F9CF1CE8712E">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>3507CCC9-4D28-37A1-3DCE-C8D1BF900485</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEXTO" id="C3E093FB-EB97-2DB3-7694-1F8CCFAFDE40">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>29DFC291-ACC9-A958-4A4D-33C9C4879359</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DECIMAL" id="53459D46-DEEA-0DC2-C200-3C59C0011653">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>8779BDDA-4348-E97B-B097-AAD4F9AD4DFC</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14074D5B-7491-C02D-446A-EF7F2A234E8B" name="ATRIBUTO_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>7C9E1BA7-13B4-34AE-72CA-4781186A0FC4</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89ECFAA9-976E-EC4E-CE81-3CC3532B8239"/>
+<colUsage columnID="451B5AF5-90D9-D19A-15C8-E48997ECDB1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="162B8113-4451-CF9A-5F30-9FE383CA361C" name="ATRIBUTO_CUENTA_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>C023ACDE-E6A8-43FC-BDB7-ACD839404CFF</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF23B1AF-9E9E-2FF8-7F77-4D7E8EECD924"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="372F5612-53B3-5C94-BC18-C53BEAECCBD6" name="ATRIBUTO_PRODUCTO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>802E5FDD-B86D-192F-DA82-7DF3AAE306B5</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="451B5AF5-90D9-D19A-15C8-E48997ECDB1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

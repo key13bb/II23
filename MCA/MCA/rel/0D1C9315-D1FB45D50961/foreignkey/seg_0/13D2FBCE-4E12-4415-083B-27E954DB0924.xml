@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="13D2FBCE-4E12-4415-083B-27E954DB0924" containerWithKeyObject="14C01029-B065-42D5-5793-928EC4704514" localFKIndex="F6E891C7-DD25-A526-B299-A99938B9F064" name="ASSET_PRODUCTO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>FFD31D8A-9C62-A578-418F-006001E3C431</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<referredTableLongName>PRODUCTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9BBA39A3-7369-8D99-014E-759030443F36</referredTableID>
+<keyObject>9BAACA2B-4D62-4FD1-7972-D4072C47F6BC</keyObject>
+<referredKeyID>9BAACA2B-4D62-4FD1-7972-D4072C47F6BC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>GTIN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

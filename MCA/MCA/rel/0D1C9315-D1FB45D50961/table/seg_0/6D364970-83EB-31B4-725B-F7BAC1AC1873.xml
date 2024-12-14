@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6D364970-83EB-31B4-725B-F7BAC1AC1873" name="RELACIONADO">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTO1" id="4AB6193F-0BEB-FD67-D5E9-2E40FEDB0F8A">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22F126D2-9F7D-8617-1F2A-80FDE99D41FB" referredColumn="ED10965E-CC06-2C10-A30C-6E66908576CB"/>
+</associations>
+</Column>
+<Column name="PRODUCTO2" id="427A251D-5289-3E6F-1F3D-B71CBAC2374C">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52AD608D-DDF7-0BDC-5EF8-0D69E305296A" referredColumn="ED10965E-CC06-2C10-A30C-6E66908576CB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DD708569-F207-3FFD-857A-A4634142D0D3" name="RELACIONADO_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4AB6193F-0BEB-FD67-D5E9-2E40FEDB0F8A"/>
+<colUsage columnID="427A251D-5289-3E6F-1F3D-B71CBAC2374C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="820EAE95-CE07-D1F1-8C63-DBFBD9C7C25C" name="RELACIONADO_PRODUCTO1_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>7CFA82DB-5844-A58B-E915-C8611D725DCC</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4AB6193F-0BEB-FD67-D5E9-2E40FEDB0F8A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FDE7913-1948-BCCC-F1B0-1216A803AFA6" name="RELACIONADO_PRODUCTO2_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>7CFA82DB-5844-A58B-E915-C8611D725DCC</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="427A251D-5289-3E6F-1F3D-B71CBAC2374C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

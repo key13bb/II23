@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ASSET_PRODUCTO_FK" directorySegmentName="seg_0" id="C8F9AF2A-9840-07DF-E4EC-6ABC47377D52">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>13D2FBCE-4E12-4415-083B-27E954DB0924</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<sourcePk>ACA8BDBD-E399-4113-255C-7FB9EE9A8474</sourcePk>
+<targetPk>67F08238-C0BA-A02E-4166-B4F81F40538D</targetPk>
+<identifying>false</identifying>
+<nameOnSource>Puede tener varios</nameOnSource>
+<nameOnTarget>Pertenecen a un</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>44A04F92-EE3A-9489-5BCA-35C53E58AE0B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2CD41F92-4664-19AA-1463-2267190C127F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

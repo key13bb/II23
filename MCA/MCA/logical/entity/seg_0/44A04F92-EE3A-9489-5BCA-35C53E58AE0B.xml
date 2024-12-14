@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="44A04F92-EE3A-9489-5BCA-35C53E58AE0B" name="PRODUCTO">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>9BBA39A3-7369-8D99-014E-759030443F36</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="GTIN" id="2F5BB159-C871-F050-38DC-9C49BC581506">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>ED10965E-CC06-2C10-A30C-6E66908576CB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SKU" id="3FA43A68-0021-8E9A-D951-534EB61B4575">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>991D187A-60CF-6197-2991-59F07879A58C</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CUENTA" id="769EA63A-D8B6-D65F-9D89-33A28CC6F6A3">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>4FB5A4CD-05D0-DD18-4711-F0E63CA4B959</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<referedAttribute>A0C4C8F4-4EFB-9A05-1BEA-C46F6AAC7262</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA CREACION" id="07451785-CB82-8C44-B740-C8863BA046AB">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>65BABC7D-95A3-6C92-ABC8-8361FEF5FB24</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA MODIFICADO" id="9BE0D088-7E84-8CDD-F3D9-2E29DF2C8F52">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>7DAA1FD7-6751-BFDD-BF5E-3949C8A30E44</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="1835568D-EB05-2BAD-761C-6B0C6529ABB6">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>900DF188-BED8-41CF-44DD-5B9EA7CD776A</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="THUMBNAIL" id="42B98FDF-8E26-C7E9-7783-DF803CBD7275">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>C5A728DE-34A9-AE42-1AAF-49F65838821F</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ACA8BDBD-E399-4113-255C-7FB9EE9A8474" name="PRODUCTO PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>9BAACA2B-4D62-4FD1-7972-D4072C47F6BC</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2F5BB159-C871-F050-38DC-9C49BC581506</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="03FED359-8083-CD8B-83E4-AB6AED106884" name="PRODUCTO SKU UK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>839F4569-2E4B-D7F0-8E60-9C7ADC1A0B11</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>3FA43A68-0021-8E9A-D951-534EB61B4575</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

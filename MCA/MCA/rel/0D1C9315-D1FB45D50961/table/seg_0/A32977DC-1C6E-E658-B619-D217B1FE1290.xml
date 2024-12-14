@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A32977DC-1C6E-E658-B619-D217B1FE1290" name="AGENTE">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>EDE4EB4E-029C-6A87-DB47-2BC42BDAF0FF</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CORREO" id="0DF5A989-EC2A-429D-11AA-048741F6A7DF">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>71E01CE8-CAF2-BD8E-ED68-C965D637CCBB</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F5980F0-3234-BF40-3033-1372912B8F69" referredColumn="0EF1D046-7C86-B077-5911-AD3C6A4E6DBF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1747AD4D-A872-D53B-EED2-885F07261677" name="AGENTE_PK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>D9F467D5-1177-A8C9-79D5-40907AEDC4C3</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DF5A989-EC2A-429D-11AA-048741F6A7DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F6A4958-2556-A560-115F-68DF525E4346" name="AGENTE_UK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>60053F13-A1E6-9EB9-D05C-EF2B30E3172F</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DF5A989-EC2A-429D-11AA-048741F6A7DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D800D294-52B9-76D9-656E-957334300E43" name="AGENTE_USUARIO_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:10:24 UTC</createdTime>
+<generatorID>763DCD2E-D45C-3A45-F0C1-575DEFD43768</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DF5A989-EC2A-429D-11AA-048741F6A7DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

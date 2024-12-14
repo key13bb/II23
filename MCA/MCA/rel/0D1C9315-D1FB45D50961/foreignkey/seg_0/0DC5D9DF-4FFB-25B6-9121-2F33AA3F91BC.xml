@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0DC5D9DF-4FFB-25B6-9121-2F33AA3F91BC" containerWithKeyObject="06FFFC45-119F-6FBA-EEB9-A3D6AD1CBECA" localFKIndex="5046E106-4099-C35D-6B22-9592E7F4EDC3" name="GALERIA_ASSET_FK">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 00:55:10 UTC</createdTime>
+<generatorID>3D80A32D-5F83-53D6-E113-3AD379377933</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<referredTableLongName>ASSET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>14C01029-B065-42D5-5793-928EC4704514</referredTableID>
+<keyObject>69A79679-87AF-23BE-8211-EEF903C7453B</keyObject>
+<referredKeyID>69A79679-87AF-23BE-8211-EEF903C7453B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>URL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

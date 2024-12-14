@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TOKEN_CUENTA_FK" directorySegmentName="seg_0" id="BFC663B4-C8E6-508C-923E-49E6276144B9">
+<createdBy>key13</createdBy>
+<createdTime>2024-12-14 01:15:00 UTC</createdTime>
+<generatorID>7770A300-9302-4B60-7A01-11FC613AAEE6</generatorID>
+<ownerDesignName>MCA</ownerDesignName>
+<engineerTo>
+<item key="0D1C9315-8924-BEDD-431A-D1FB45D50961" value="true"/>
+</engineerTo>
+<sourcePk>46762F09-D39F-AEA9-42B7-C5D971405B57</sourcePk>
+<targetPk>A100CA66-4FF5-6680-7F43-10F9170D056A</targetPk>
+<identifying>true</identifying>
+<nameOnSource>Mediante un</nameOnSource>
+<nameOnTarget>A una</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F4A9458B-5C05-E3D3-A981-340076D97BDE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C5309DEC-4658-8E33-4B99-8DE0396B0818</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
