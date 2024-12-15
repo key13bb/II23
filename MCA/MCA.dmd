@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MCA" id="FC134F36-B58E-0EC1-10D1-60A5CBA620E7" version="3.5">
-<createdBy>key13</createdBy>
-<createdTime>2024-11-12 16:19:53 UTC</createdTime>
-<ownerDesignName>MCA</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>FC134F36-B58E-0EC1-10D1-60A5CBA620E7</designId>
-</OSDM_Design>
