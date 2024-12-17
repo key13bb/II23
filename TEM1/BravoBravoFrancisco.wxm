@@ -1,0 +1,95 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 23.05.1 ] */
+/* [wxMaxima: input   start ] */
+43*37;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+totient(1591);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(1512,13);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+inv_mod(13, 1512);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+power_mod(280,394,1512);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+totient(6);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+16/2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+inv_mod(5,6);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+totient(36);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+inv_mod(7,36);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+2^7;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+128*31;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+mod(3968,36);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+chinese([3,2,8],[6,5,36]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+9+8+7+6+4+3+2+1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-40+19;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-21+19;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-2+19;
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 23.05.1"$
