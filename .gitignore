@@ -2,3 +2,5 @@
 .vscode
 .fleet
 .DS_Store
+/PRAC/*/build
+/PRAC/*/output
