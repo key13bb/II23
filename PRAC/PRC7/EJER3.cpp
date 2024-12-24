@@ -1,72 +1,65 @@
-#include <iostream>
 #include <array>
+#include <iostream>
 #include <string>
-
 using namespace std;
-
-const int MAX_PAL_DIST = 4;
-
-typedef array<string, MAX_PAL_DIST> Palabras;
-
-struct Cadena {
-    Palabras palabras;
-    int numPal = 0;
+const int MAX_PAL_DIST = 20;
+typedef array<string, MAX_PAL_DIST> TPalabras;
+struct TDatos {
+    TPalabras pal;
+    int nPal;
 };
 
-int tamPalabra(string palabra) {
-    return palabra.length();
+bool esta(const string& pal, const TDatos& datos)
+{
+    int i = 0;
+    while ((i < datos.nPal) && (pal.size() >= datos.pal[i].size()) && pal != datos.pal[i]) {
+        i++;
+    }
+    return i < datos.nPal && pal == datos.pal[i];
 }
 
-void insertarPalabra(Cadena &c, string palabra) {
-    if (c.numPal == 0) {
-        c.palabras[0] = palabra;
-    } else {
-        int i = 0;
-        while (i < c.numPal && tamPalabra(c.palabras[i]) < tamPalabra(palabra)) {
-            i++;
-        }
-        for (int j = c.numPal; j > i; j--) {
-            c.palabras[j] = c.palabras[j - 1];
-        }
-        c.palabras[i] = palabra;
+int posicion(const string& pal, const TDatos& datos)
+{
+    int i = 0;
+    while ((i < datos.nPal) && (pal.size() >= datos.pal[i].size())) {
+        i++;
     }
-    c.numPal++;
+    return i;
 }
 
-bool comprobarPalabra(Cadena c, string p) {
-    bool found = false, valido = false;
-    for (int i = 0; i < c.numPal; i++) {
-        if (c.palabras[i] == p) {
-            found = true;
-        }
+void abrirHueco(TDatos& datos, int pos)
+{
+    for (int i = datos.nPal; i > pos; i--) {
+        datos.pal[i] = datos.pal[i - 1];
     }
-    if (!found) {
-        valido = true;
+}
+
+void escribir(const TDatos& datos)
+{
+    cout << "Las palabras ordenadas de menor a mayor longitud son:\n";
+    for (int i = 0; i < datos.nPal; i++) {
+        cout << datos.pal[i] << " ";
     }
-    return valido;
-} 
+    cout << endl;
+}
 
-int main() {
-
-    Cadena input;
+int main()
+{
+    TDatos datos;
+    string pal;
+    int pos;
+    datos.nPal = 0;
     cout << "Introduzca un texto (FIN para terminar): ";
-    string palabra = "";
-    while (palabra != "FIN") {
-        cin >> palabra;
-        if (palabra != "FIN") {
-            if (input.numPal == 0) {
-                input.palabras[0] = palabra;
-            } else {
-                if (comprobarPalabra(input, palabra)) {
-                    insertarPalabra(input, palabra);
-                }
-            }
-            input.numPal++;
+    cin >> pal;
+    while (pal != "FIN") {
+        if (!esta(pal, datos)) {
+            pos = posicion(pal, datos);
+            abrirHueco(datos, pos);
+            datos.pal[pos] = pal;
+            datos.nPal++;
         }
+        cin >> pal;
     }
-
-    cout << "Las palabras ordenadas de menor a mayor longitud son: " << endl;
-    for (int i = 0; i < input.numPal; i++) {
-        cout << input.palabras[i] << endl;
-    }
+    escribir(datos);
+    return 0;
 }
