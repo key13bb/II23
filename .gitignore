@@ -7,3 +7,4 @@
 .fleet
 .DS_Store
 out
+*.class
