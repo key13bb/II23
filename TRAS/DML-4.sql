@@ -1,3 +1,10 @@
+-- GNU GENERAL PUBLIC LICENSE
+-- Version 3, 29 June 2007
+--
+-- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+-- Everyone is permitted to copy and distribute verbatim copies
+-- of this license document, but changing it is not allowed.
+
 select A.GENERO, round(avg(decode(CALIFICACION, 'MH',10,'SB',9,'NT',7,'AP',5,'SP',0, 'NP', 0, 0)), 2) Media
     from ALUMNOS A join MATRICULAR M on A.DNI = M.ALUMNO
     where M.CURSO = '21/22'

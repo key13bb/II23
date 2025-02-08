@@ -1,3 +1,10 @@
+-- GNU GENERAL PUBLIC LICENSE
+-- Version 3, 29 June 2007
+--
+-- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+-- Everyone is permitted to copy and distribute verbatim copies
+-- of this license document, but changing it is not allowed.
+
 select GRUPO, CALIFICACION from DOCENCIA.MATRICULAR where DOCENCIA.MATRICULAR.ASIGNATURA = 112;
 select ID from DOCENCIA.PROFESORES where DIRECTOR_TESIS is null;
 select unique ID from PROFESORES left join DOCENCIA.IMPARTIR on PROFESORES.ID = IMPARTIR.PROFESOR where PROFESORES.DIRECTOR_TESIS is not null or IMPARTIR.ASIGNATURA is not null;
