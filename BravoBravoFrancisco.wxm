@@ -1,0 +1,111 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 24.02.1 ] */
+/* [wxMaxima: input   start ] */
+load(graphs);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+4x=6(mod10)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(4,10);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+6/2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Como el mcd divide a 6, entonces si se pueden dividir las propiedades
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcdex(4,10);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+744841531958061875
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+Dn:divisors(n);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+m:475;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(n,m);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+No tiene divisores porque el máximo común divisor es menor de 475, por lo que ninguno de los divisores de 744841531958061875 puede ser múltiplo de 475 si faltan factores de 475
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g:dodecahedron_graph();
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+draw_graph(g);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+is_connected(g);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+tree:minimum_spanning_tree(g);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+draw_graph(g, show_edges=edges(tree));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+h:hamilton_cycle(g);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+draw_graph(g, show_edges=vertices_to_cycle(h));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+draw_graph(g, redraw=true, program=planar_embedding);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+vertex_coloring(g);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+draw_graph(g, vertex_size=4,show_id=true,
+        vertex_partition=[[1,4,8,10,12,13,14], [3,5,9,11,15,18,19], [0, 2,6,7,16,17]]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 24.02.1"$
