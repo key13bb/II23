@@ -1,0 +1,13 @@
+1. "Plug & pray", o traducio al español "conectar y rezar" hace referencia a cuando se configuraban
+los dispositivos manualmente y que cuando se conectaran, se "rezaba" para que funcionaran como se esperaba
+
+2. Atlas Supervisor surgió en la década de los 60 y el sheduling consistía en asignar un tiempo de ejecución
+a los programas y servicios. Esto permitió optimizar muchísimo la gestión de tiempo y de recursos.
+
+3. El concepto de kernel también surgió sobre los años 60. Ofrecía interactuar con el hardware y ofrecer
+servicios a las aplicaciones según el hardware disponible entonces. Además fue crucial para el desarrollo
+de Unix y posteriormente, la salida de sistemas operativos más modernos como Android (si, soy tremendo fan),
+Linux, Windows...
+
+4. A pesar de todo, lo que faltaba era el concepto de multitarea, que llegó con los sistemas operativos mencionados antes.
+(Viva Android)
