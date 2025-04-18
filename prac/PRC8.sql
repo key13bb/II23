@@ -1,0 +1,203 @@
+-- GNU GENERAL PUBLIC LICENSE
+-- Version 3, 29 June 2007
+--
+-- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+-- Everyone is permitted to copy and distribute verbatim copies
+-- of this license document, but changing it is not allowed.
+
+
+--Reset database--
+DROP TABLE MISALUMNOS CASCADE CONSTRAINTS;
+
+DROP TABLE MIMATRICULAR CASCADE CONSTRAINTS;
+
+--Inicializar la base de datos--
+CREATE TABLE MISALUMNOS (
+    "DNI" NUMBER (9, 0) PRIMARY KEY,
+    "NOMBRE" VARCHAR2 (20 BYTE),
+    "APELLIDO1" VARCHAR2 (20 BYTE),
+    "APELLIDO2" VARCHAR2 (20 BYTE),
+    "GENERO" VARCHAR2 (4 BYTE),
+    "EMAIL" VARCHAR2 (40 BYTE),
+    "FECHA_NACIMIENTO" DATE,
+    "FECHA_PRIM_MATRICULA" DATE
+);
+
+--1--
+INSERT INTO
+    MISALUMNOS
+SELECT
+    A .DNI,
+    A .NOMBRE,
+    A .APELLIDO1,
+    A .APELLIDO2,
+    A .GENERO,
+    A .EMAIL,
+    A .FECHA_NACIMIENTO,
+    A .FECHA_PRIM_MATRICULA
+FROM
+    DOCENCIA.ALUMNOS A
+    JOIN DOCENCIA.PROVINCIA P ON A .CPRO = P.CODIGO
+WHERE
+    P.NOMBRE = 'Málaga';
+
+--2--
+UPDATE
+    MISALUMNOS
+SET
+    NOMBRE = upper(NOMBRE),
+    APELLIDO1 = upper(APELLIDO1),
+    APELLIDO2 = upper(APELLIDO2);
+
+--3--
+CREATE TABLE MIMATRICULAR AS
+SELECT
+    *
+FROM
+    DOCENCIA.MATRICULAR;
+
+--4--
+DELETE FROM
+    MIMATRICULAR
+WHERE
+    ALUMNO NOT IN (
+        SELECT
+            DNI
+        FROM
+            MISALUMNOS
+    );
+
+--5--
+INSERT INTO
+    mimatricular (alumno, asignatura, grupo, curso)
+SELECT
+    A .DNI,
+    112,
+    'A',
+    '23/24'
+FROM
+    MISALUMNOS A
+    JOIN MIMATRICULAR M ON A .DNI = M.ALUMNO
+WHERE
+    months_between (SYSDATE, A .FECHA_PRIM_MATRICULA) / 12 < 4;
+
+--6--
+UPDATE
+    MIMATRICULAR
+SET
+    CALIFICACION = 'NP'
+WHERE
+    ALUMNO IN (
+        SELECT
+            ALUMNO
+        FROM
+            MIMATRICULAR
+        WHERE
+            CALIFICACION IS NULL
+            AND CURSO != '23/24'
+    );
+
+--7--
+UPDATE
+    MIMATRICULAR
+SET
+    CALIFICACION = 'AP'
+WHERE
+    (ALUMNO || CURSO || CALIFICACION) IN (
+        SELECT
+            DISTINCT ALUMNO || CURSO || CALIFICACION
+        FROM
+            MIMATRICULAR
+        WHERE
+            CALIFICACION IN ('NP', 'SP')
+            AND CURSO != '23/24'
+        GROUP BY
+            ALUMNO,
+            CURSO,
+            CALIFICACION
+        HAVING
+            COUNT(*) = 1
+    );
+
+--8--
+INSERT INTO
+    MIMATRICULAR (ALUMNO, ASIGNATURA, GRUPO, CURSO, CALIFICACION)
+SELECT
+    DNI,
+    DOCENCIA.ASIGNATURAS.CODIGO,
+    'A',
+    '23/24',
+    NULL
+FROM
+    MISALUMNOS
+    JOIN DOCENCIA.ASIGNATURAS ON CODIGO = ASIGNATURAS.CODIGO
+WHERE
+    DOCENCIA.ASIGNATURAS.CURSO = 3
+    AND DNI NOT IN (
+        SELECT
+            DISTINCT ALUMNO
+        FROM
+            MIMATRICULAR
+        WHERE
+            CURSO != '23/24'
+            AND CALIFICACION IN ('NP', 'SP')
+    );
+
+--9--
+DELETE FROM
+    MISALUMNOS
+WHERE
+    MONTHS_BETWEEN(SYSDATE, FECHA_NACIMIENTO) / 12 > 23
+    AND EMAIL IS NULL;
+
+DELETE FROM
+    MIMATRICULAR
+WHERE
+    ALUMNO NOT IN (
+        SELECT
+            DNI
+        FROM
+            MISALUMNOS
+    );
+
+--10--
+DELETE FROM
+    MIMATRICULAR
+WHERE
+    ALUMNO IN (
+        SELECT
+            M1.ALUMNO
+        FROM
+            MIMATRICULAR M1
+        WHERE
+            (
+                M1.CALIFICACION IN ('NP', 'SP')
+                OR M1.CALIFICACION IS NULL
+            )
+            AND M1.CURSO IN ('21/22', '22/23')
+        GROUP BY
+            M1.ALUMNO
+        HAVING
+            COUNT(DISTINCT M1.ASIGNATURA) > 3
+    );
+
+--11--
+INSERT INTO
+    DOCENCIA.V_MATRICULAR_EJERCICIO (ALUMNO, ASIGNATURA, GRUPO, CURSO, CALIFICACION)
+SELECT
+    ALUMNO,
+    ASIGNATURA,
+    GRUPO,
+    CURSO,
+    CALIFICACION
+FROM
+    MIMATRICULAR;
+
+--12--
+SELECT
+    *
+FROM
+    DOCENCIA.V_MATRICULAR_EJERCICIO;
+
+--13--
+COMMIT;

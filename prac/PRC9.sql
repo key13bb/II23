@@ -1,0 +1,295 @@
+-- GNU GENERAL PUBLIC LICENSE
+-- Version 3, 29 June 2007
+--
+-- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+-- Everyone is permitted to copy and distribute verbatim copies
+-- of this license document, but changing it is not allowed.
+
+
+--1--
+CREATE TABLE TOUR AS
+SELECT
+    *
+FROM
+    DOCENCIA.TOUR2017;
+
+--2--
+CREATE TABLE INFO_PERSONAL (
+    ID NUMBER(3, 0) PRIMARY KEY,
+    NOMBRE VARCHAR2(50),
+    NACIONALIDAD VARCHAR2(3)
+);
+
+CREATE TABLE INFO_PROFESIONAL (
+    ID NUMBER(3, 0) PRIMARY KEY,
+    EQUIPO VARCHAR2(50),
+    PAIS VARCHAR2(20),
+    CATEGORIA VARCHAR2(20)
+);
+
+INSERT INTO
+    INFO_PERSONAL
+SELECT
+    ID,
+    NAME,
+    NATIONALITY
+FROM
+    TOUR;
+
+INSERT INTO
+    INFO_PROFESIONAL
+SELECT
+    ID,
+    TEAM,
+    COUNTRY,
+    CATEGORY
+FROM
+    TOUR;
+
+--3--
+CREATE VIEW TOUR_VIEW AS
+SELECT
+    PER.ID,
+    PRO.EQUIPO,
+    PRO.PAIS,
+    PER.NOMBRE,
+    PER.NACIONALIDAD,
+    PRO.CATEGORIA
+FROM
+    INFO_PERSONAL PER
+    JOIN INFO_PROFESIONAL PRO ON (PER.ID = PRO.ID);
+
+SELECT
+    *
+FROM
+    TOUR;
+
+SELECT
+    *
+FROM
+    TOUR_VIEW;
+
+--4--
+INSERT INTO
+    TOUR_VIEW
+VALUES
+    (
+        500,
+        'UMA INFROMATICA',
+        'ESPAÑA',
+        'ENRIQUE SOLER',
+        'ESP',
+        'WORLDTOUR'
+    );
+
+CREATE
+OR REPLACE TRIGGER TR_INSERTA_CICLISTA INSTEAD OF
+INSERT
+    ON TOUR_VIEW FOR EACH ROW BEGIN
+        INSERT INTO
+            INFO_PERSONAL
+        VALUES
+            (:NEW.ID, :NEW.NOMBRE, :NEW.NACIONALIDAD);
+
+INSERT INTO
+    INFO_PROFESIONAL
+VALUES
+    (:NEW.ID, :NEW.EQUIPO, :NEW.PAIS, :NEW.CATEGORIA);
+
+END TR_INSERTA_CICLISTA;
+
+--5--
+CREATE TABLE LOG_INSERCCION (USUARIO VARCHAR(12), FECHA DATE);
+
+CREATE
+OR REPLACE TRIGGER TR_LOG_INSERCCION AFTER
+INSERT
+    ON TOUR BEGIN
+        INSERT INTO
+            LOG_INSERCCION
+        VALUES
+            (USER, SYSDATE);
+
+END TR_LOG_INSERCCION;
+
+--6--
+CREATE VIEW TOUR_ITALY AS
+SELECT
+    *
+FROM
+    TOUR T
+WHERE
+    UPPER(NATIONALITY) = 'ITA';
+
+CREATE VIEW TOUR_SPAIN AS
+SELECT
+    *
+FROM
+    TOUR T
+WHERE
+    UPPER(NATIONALITY) = 'ESP';
+
+--7--
+INSERT INTO
+    TOUR_SPAIN
+VALUES
+    (
+        1,
+        'TEAM CHERRY',
+        'Spain',
+        'MARCOS
+RAMIREZ',
+        'ESP',
+        'WorldTour'
+    );
+
+--8--
+INSERT INTO
+    TOUR_SPAIN
+VALUES
+    (
+        1,
+        'TEAM CHERRY',
+        'Spain',
+        'CARLOS
+JIMENEZ',
+        'ITA',
+        'WorldTour'
+    );
+
+-- Se inserta correctamente, pero no se muestra en la vista --
+--9--
+CREATE VIEW TOUR_SPAIN AS
+SELECT
+    *
+FROM
+    TOUR
+WHERE
+    UPPER(NATIONALITY) = 'ESP' WITH CHECK OPTION;
+
+CREATE VIEW TOUR_ITALY AS
+SELECT
+    *
+FROM
+    TOUR
+WHERE
+    UPPER(NATIONALITY) = 'ITA' WITH CHECK OPTION;
+
+--10--
+-- Afecta tanto a INSERT como a UPDATE, sólo que con UPDATE, sólo se inserta si se cumple la condición de la vista
+-- Para controlarlo, se puede hacer un trigger que se active en AFTER INSERT o AFTER UPDATE
+--11--
+CREATE
+OR REPLACE VIEW "UBD2285"."TOUR_SPAIN" (
+    "ID",
+    "TEAM",
+    "COUNTRY",
+    "NAME",
+    "NATIONALITY",
+    "CATEGORY"
+) AS
+SELECT
+    "ID",
+    "TEAM",
+    "COUNTRY",
+    "NAME",
+    "NATIONALITY",
+    "CATEGORY"
+FROM
+    TOUR
+WHERE
+    UPPER(NATIONALITY) = 'ESP';
+
+--12--
+CREATE VIEW V_TOUR_FRANCE AS
+SELECT
+    *
+FROM
+    TOUR T
+WHERE
+    UPPER(t.NATIONALITY) = 'FRA';
+
+GRANT
+DELETE
+    ON V_TOUR_FRANCE TO UBD1006;
+
+-- Soy yo pero se supone que es otro usuario
+--13--
+DELETE FROM
+    V_TOUR_FRANCE
+WHERE
+    ID = 11;
+
+DELETE FROM
+    V_TOUR_FRANCE
+WHERE
+    ID = 12;
+
+--14--
+CREATE VIEW CICLISTAS_POR_EQUIPOS AS
+SELECT
+    TEAM AS NOMBRE,
+    COUNT(*) AS NUM_CICLISTAS
+FROM
+    TOUR
+GROUP BY
+    TEAM;
+
+-- No se puede insertar porque hay una función de agregación en la vista
+--15--
+CREATE VIEW TB_CICLISTAS_POR_EQUIPOS AS
+SELECT
+    TEAM AS NOMBRE,
+    COUNT(*) AS NUM_CICLISTAS
+FROM
+    TOUR
+GROUP BY
+    TEAM;
+
+CREATE
+OR REPLACE TRIGGER TR_TB_CICLISTAS_POR_EQUIPOS AFTER
+INSERT
+    ON TOUR FOR EACH ROW BEGIN
+        UPDATE
+            TB_CICLISTAS_POR_EQUIPOS
+        SET
+            NUM_CICLISTAS = NUM_CICLISTAS + 1
+        WHERE
+            NOMBRE = :NEW.TEAM;
+
+END TR_TB_CICLISTAS_POR_EQUIPOS;
+
+--16--
+CREATE
+OR REPLACE TRIGGER TR_DELETE_TOUR AFTER
+DELETE
+    ON TOUR FOR EACH ROW BEGIN
+        UPDATE
+            TB_CICLISTAS_POR_EQUIPOS
+        SET
+            NUM_CICLISTAS = NUM_CICLISTAS - 1
+        WHERE
+            NOMBRE = :OLD.TEAM;
+
+END;
+
+--17--
+CREATE
+OR REPLACE TRIGGER TR_UPDATE_TOUR AFTER
+UPDATE
+    ON TOUR FOR EACH ROW BEGIN
+        UPDATE
+            TB_CICLISTAS_POR_EQUIPOS
+        SET
+            NUM_CICLISTAS = NUM_CICLISTAS - 1
+        WHERE
+            NOMBRE = :OLD.TEAM;
+
+UPDATE
+    TB_CICLISTAS_POR_EQUIPOS
+SET
+    NUM_CICLISTAS = NUM_CICLISTAS + 1
+WHERE
+    NOMBRE = :NEW.TEAM;
+
+END;
