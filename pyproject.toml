@@ -6,9 +6,13 @@ authors = ["Francisco Bravo Bravo <key13bb@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.14"
+python = "^3.13"
+pandas = "^2.2.3"
+numpy = "^2.2.0"
+poetry-core = "^2.1.2"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+package-mode = false
