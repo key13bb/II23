@@ -1,52 +1,57 @@
-package Lab61.soluciones
+package star.key13bb
+package prc6
 
 import java.util.concurrent.*
 import scala.util.Random
-object aseo{
-  // CS-Cliente: Esperan si está el Equipo de Limpieza en el aseo
-  // CS-EquipoLimpieza: Espera si hay clientes en el aseo
 
-  // ...
+object aseo {
+	// CS-Cliente: Esperan si está el Equipo de Limpieza en el aseo
+	// CS-EquipoLimpieza: Espera si hay clientes en el aseo
 
-  def entraCliente(id:Int)={
-    // ...
-    log(s"Entra cliente $id. Hay $numClientes clientes.")
-    // ...
-  }
-  def saleCliente(id:Int)={
-    // ...
-    log(s"Sale cliente $id. Hay $numClientes clientes.")
-    // ...
-  }
-  def entraEquipoLimpieza ={
-    // ...
-    log(s"        Entra el equipo de limpieza.")
-    // ...
-  }
-  def saleEquipoLimpieza = {
-    // ...
-    log(s"        Sale el equipo de limpieza.")
-    // ...
-  }
+	// ...
+
+	def entraCliente(id: Int): Unit = {
+		// ...
+		//log(s"Entra cliente $id. Hay $numClientes clientes.")
+		// ...
+	}
+
+	def saleCliente(id: Int): Unit = {
+		// ...
+		//log(s"Sale cliente $id. Hay $numClientes clientes.")
+		// ...
+	}
+
+	def entraEquipoLimpieza(): Unit = {
+		// ...
+		//log(s"        Entra el equipo de limpieza.")
+		// ...
+	}
+
+	def saleEquipoLimpieza(): Unit = {
+		// ...
+		//log(s"        Sale el equipo de limpieza.")
+		// ...
+	}
 }
 
 object Ejercicio3 {
-  def main(args: Array[String]) = {
-    val cliente = new Array[Thread](10)
-    for (i <- 0 until cliente.length)
-      cliente(i) = thread {
-        while (true)
-          Thread.sleep(Random.nextInt(500))
-          aseo.entraCliente(i)
-          Thread.sleep(Random.nextInt(50))
-          aseo.saleCliente(i)
-      }
-    val equipoLimpieza = thread {
-      while (true)
-        Thread.sleep(Random.nextInt(500))
-        aseo.entraEquipoLimpieza
-        Thread.sleep(Random.nextInt(100))
-        aseo.saleEquipoLimpieza
-    }
-  }
+	def main(args: Array[String]): Unit = {
+		val cliente = new Array[Thread](10)
+		for (i <- cliente.indices)
+			cliente(i) = thread {
+				while (true)
+					Thread.sleep(Random.nextInt(500))
+					aseo.entraCliente(i)
+					Thread.sleep(Random.nextInt(50))
+					aseo.saleCliente(i)
+			}
+		val equipoLimpieza = thread {
+			while (true)
+				Thread.sleep(Random.nextInt(500))
+				aseo.entraEquipoLimpieza()
+				Thread.sleep(Random.nextInt(100))
+				aseo.saleEquipoLimpieza()
+		}
+	}
 }
