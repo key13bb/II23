@@ -1,64 +1,42 @@
 package prc4;
 
 import java.io.IOException;
-import java.util.Scanner;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress; // Importar InetAddress
 import java.nio.charset.StandardCharsets;
-
-
-/**
- *
- * @author <su nombre aquí>
- */
+import java.util.Scanner;
 
 public class ClientUDP {
     public static void main(String[] args) throws IOException {
-        // DATOS DEL SERVIDOR:
-        //* FIJOS: coméntelos si los lee de la línea de comandos
         String serverName = "127.0.0.1"; //direccion local
         int serverPort = 54322;
-        //* VARIABLES: descoméntelos si los lee de la línea de comandos
         //String serverName = args[0];
         //int serverPort = Integer.parseInt(args[1]);
 
-        SocketAddress socketAddress = new InetSocketAddress(serverName, serverPort);
-        DatagramSocket serviceSocket = new DatagramSocket(socketAddress);
-        //* COMPLETAR: crear socket
-
-        // INICIALIZA ENTRADA POR TECLADO
+        InetAddress serverAddress = InetAddress.getByName(serverName); // <--- CORRECCIÓN
+        DatagramSocket serviceSocket = new DatagramSocket();
         Scanner stdIn = new Scanner(System.in, StandardCharsets.UTF_8);
         String userInput;
-        System.out.println("Introduzca un texto a enviar que empiece con dígito (sin dígito inicial para acabar): ");
-        userInput = stdIn.nextLine(); /*CADENA ALMACENADA EN userInput*/
-
-        //* COMPLETAR: Comprobar si el usuario quiere terminar servicio
-        while (true)
+        System.out.println("Introduzca un texto a enviar que empiece con dígito (sin dígito inicial para acabar, o 'exit' para acabar): "); // Modificado el prompt para claridad
+        userInput = stdIn.nextLine();
+        while (!userInput.equalsIgnoreCase("exit"))
         {
-            //* COMPLETAR: Crear datagrama con la cadena escrito en el cuerpo
-            DatagramPacket packet = new DatagramPacket(userInput.getBytes(StandardCharsets.UTF_8), userInput.length());
-            //* COMPLETAR: Enviar datagrama a traves del socket
+            DatagramPacket packet = new DatagramPacket(userInput.getBytes(StandardCharsets.UTF_8),
+                    userInput.length(),
+                    serverAddress,
+                    serverPort);
             serviceSocket.send(packet);
-
             System.out.println("STATUS: Waiting for the reply");
-
-            //* COMPLETAR: Crear e inicializar un datagrama VACIO para recibir la respuesta de máximo 400 bytes
-
             DatagramPacket response = new DatagramPacket(new byte[1024], 1024);
-            //* COMPLETAR: Recibir datagrama de respuesta
             serviceSocket.receive(response);
-
-            //* COMPLETAR: Extraer contenido del cuerpo del datagrama en variable line
-            String line = response.getData().toString();
-
+            String line = new String(response.getData(), 0, response.getLength(), StandardCharsets.UTF_8);
             System.out.println("echo: " + line);
-            System.out.println("Introduzca un texto a enviar que empiece con dígito (sin dígito inicial para acabar): ");
+            System.out.println("Introduzca un texto a enviar que empiece con dígito ('exit' para acabar): ");
             userInput = stdIn.nextLine();
         }
-
-        //System.out.println("STATUS: Closing client");
-
-        //* COMPLETAR Cerrar socket cliente
-
-        //System.out.println("STATUS: closed");
+        System.out.println("STATUS: Closing client");
+        serviceSocket.close();
+        System.out.println("STATUS: closed");
     }
 }

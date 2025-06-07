@@ -1,56 +1,64 @@
 package prc4;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress; // Puede que necesites este import, aunque packet.getAddress() ya lo devuelve
+import java.net.SocketException; // Para DatagramSocket
 import java.nio.charset.StandardCharsets;
 
-/**
- *
- * @author key13bb
- */
 public class ServerUDP {
     public static String cifrar(String texto) {
         String resultado = "";
-        //* COMPLETAR devolver texto cifrado usando el algoritmo de cifrado César solo para letras entre 'a' y 'z'
-        resultado = "Tamaño del texto: " + texto.length();
+        StringBuilder sb = new StringBuilder();
+        for (char c : texto.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                sb.append((char) ('a' + (c - 'a' + 1) % 26));
+            } else if (c >= 'A' && c <= 'Z') {
+                sb.append((char) ('A' + (c - 'A' + 1) % 26));
+            }
+            else {
+                sb.append(c);
+            }
+        }
+        resultado = sb.toString();
         return resultado;
     }
 
     public static void main(String[] args) throws IOException {
-        // DATOS DEL SERVIDOR
-        //* FIJO: Si se lee de línea de comando debe comentarse
-        int port = 54322; // puerto del servidor
-        //* VARIABLE: Si se lee de línea de comando debe descomentarse
+        int port = 54322;
         // int port = Integer.parseInt(args[0]); // puerto del servidor
+        DatagramSocket server = null; // Inicializar a null para el bloque try-catch-finally
 
-        // SOCKET
-        DatagramSocket server = new DatagramSocket(port);
+        try { // Usar un try-catch para manejar SocketException al crear el socket
+            server = new DatagramSocket(port);
+            System.out.println("STATUS: Servidor UDP iniciado en el puerto " + port);
+            while (true)
+            {
+                DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
+                server.receive(packet); // Este método bloquea hasta que recibe un paquete
+                String receivedText = new String(packet.getData(), 0, packet.getLength(), StandardCharsets.UTF_8);
+                InetAddress clientAddress = packet.getAddress();
+                int clientPort = packet.getPort();
 
-        //* COMPLETAR Crear e inicalizar el socket del servidor
+                System.out.println("Mensaje recibido de " + clientAddress.getHostAddress() + ":" + clientPort + " -> " + receivedText);
+                String responseText = cifrar(receivedText);
+                byte[] responseData = responseText.getBytes(StandardCharsets.UTF_8);
+                DatagramPacket toSend = new DatagramPacket(responseData, responseData.length, clientAddress, clientPort);
+                server.send(toSend);
+                System.out.println("Respuesta enviada: " + responseText);
+            }
 
-        // Funcion PRINCIPAL del servidor
-        while (true)
-        {
-            DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
-            //* COMPLETAR: Crear e inicializar un datagrama VACIO para recibir la respuesta de máximo 400 bytes
-            server.receive(packet);
-            //* COMPLETAR: Recibir datagrama
-
-            //* COMPLETAR: Obtener texto recibido
-            String line = packet.getData().toString();
-
-            //* COMPLETAR: Mostrar por pantalla la direccion socket (IP y puerto) del cliente y su texto
-
-            System.out.println(server.getLocalAddress().toString() + ": " + server.getLocalPort());
-            // Capitalizamos la linea
-            line = cifrar(line);
-
-            //* COMPLETAR: crear datagrama de respuesta
-            DatagramPacket toSend = new DatagramPacket(new byte[1024], 1024);
-            //* COMPLETAR: Enviar datagrama de respuesta
-            toSend.setData(line.getBytes(StandardCharsets.UTF_8));
-            server.send(toSend);
-        } // Fin del bucle del servicio
+        } catch (SocketException e) {
+            System.err.println("Error de socket: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Error de I/O: " + e.getMessage());
+        } finally {
+            if (server != null && !server.isClosed()) {
+                System.out.println("STATUS: Cerrando servidor");
+                server.close();
+                System.out.println("STATUS: Servidor cerrado");
+            }
+        }
     }
-
 }
