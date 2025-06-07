@@ -7,31 +7,44 @@ import scala.util.Random
 object aseo {
 	// CS-Cliente: Esperan si está el Equipo de Limpieza en el aseo
 	// CS-EquipoLimpieza: Espera si hay clientes en el aseo
-
-	// ...
+	val mutex = new Semaphore(1)
+	var clientes = 0
+	val aseo: Semaphore = new Semaphore(1)
 
 	def entraCliente(id: Int): Unit = {
-		// ...
-		//log(s"Entra cliente $id. Hay $numClientes clientes.")
-		// ...
+		mutex.acquire()
+		try {
+			clientes += 1
+			log(s"Entra cliente $id. Hay $clientes clientes.")
+			if (clientes == 1) {
+				aseo.acquire()
+			}
+		} finally {
+			mutex.release()
+		}
 	}
 
 	def saleCliente(id: Int): Unit = {
-		// ...
-		//log(s"Sale cliente $id. Hay $numClientes clientes.")
-		// ...
+		mutex.acquire()
+		try {
+			clientes -= 1
+			log(s"Sale cliente $id. Hay $clientes clientes.")
+			if (clientes == 0) {
+				aseo.release()
+			}
+		} finally {
+			mutex.release()
+		}
 	}
 
 	def entraEquipoLimpieza(): Unit = {
-		// ...
-		//log(s"        Entra el equipo de limpieza.")
-		// ...
+		aseo.acquire()
+		log(s"        Entra el equipo de limpieza.")
 	}
 
 	def saleEquipoLimpieza(): Unit = {
-		// ...
-		//log(s"        Sale el equipo de limpieza.")
-		// ...
+		aseo.release()
+		log(s"        Sale el equipo de limpieza.")
 	}
 }
 

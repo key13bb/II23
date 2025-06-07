@@ -12,11 +12,7 @@ object mediciones {
 
 	var numMed = 0
 	var mutex = Semaphore(1)
-	var esperaSensor: Array[Semaphore] = Array[Semaphore](Semaphore(3))
-
-	for (i <- 0 to 2) {
-		esperaSensor(i) = Semaphore(0)
-	}
+	var esperaSensor: Array[Semaphore] = Array.fill(3)(new Semaphore(0))
 	var esperaTrab = Semaphore(0)
 
 	def nuevaMedicion(id: Int): Unit = {

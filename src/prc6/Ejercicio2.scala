@@ -34,7 +34,7 @@ class Cadena(n: Int) {
 		log(s"Colocador pone un producto $p. Quedan ${tipo.mkString("[", ",", "]")}")
 		log(s"Total de productos empaquetados $cuentaTotal")
 		if (tipo(p) == 1) esperaEnp(p).release()
-		if (tipo.sum() < n) esperaCol.release()
+		if (tipo.sum < n) esperaCol.release()
 		mutex.release()
 	}
 }

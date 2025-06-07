@@ -10,29 +10,34 @@ class Coche(C: Int) extends Thread {
 	// CS-pasajero2: un pasajero que está en el coche no puede bajarse hasta que haya terminado el viaje
 	// CS-coche: el coche espera a que se hayan subido C pasajeros para dar una vuelta
 	private var numPas = 0
+	private val mutex = new Semaphore(1)
+	private val coche = new Semaphore(1)
 	// ...
 
 	def nuevoPaseo(id: Int): Unit = {
 		// el pasajero id quiere dar un paseo en la montaña rusa
-		// ...
+		coche.acquire()
+		mutex.acquire()
+		numPas += 1
 		log(s"El pasajero $id se sube al coche. Hay $numPas pasajeros.")
-		// ...
-		log(s"El pasajero $id se baja del coche. Hay $numPas pasajeros.")
-		// ...
+		if (numPas == C) {
+			coche.release()
+			numPas = 0
+			log(s"El pasajero $id se baja del coche. Hay $numPas pasajeros.")
+		}
+		mutex.release()
 	}
 
 	private def esperaLleno(): Unit = {
 		// el coche espera a que se llene para dar un paseo
-		// ...
+		coche.acquire()
 		log(s"        Coche lleno!!! empieza el viaje....")
-		// ...
 	}
 
 	private def finViaje(): Unit = {
 		// el coche indica que se ha terminado el viaje
-		// ...
 		log(s"        Fin del viaje... :-(")
-		// ...
+		coche.release()
 	}
 
 	override def run(): Unit = {
