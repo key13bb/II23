@@ -1,0 +1,193 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5CCAACB6-3809-3C63-6C48-8FFFE8ADD8C6" name="EVENTO">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:26:45 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_EVENTO" id="E4964331-99AB-239A-FD8E-D3A31ECD69DF">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:27:15 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA" id="CE329495-145C-096F-B1BD-7506568B5D8F">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:26:52 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="C22490AB-3FB8-D335-CD8F-A1041DD4928C">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:28:46 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="9AD41FE9-FDA5-9768-0414-92705A3296BE">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:29:08 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 CHAR</dataTypeSize>
+<ownDataTypeParameters>2000 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AFORO" id="8D85DBCE-BEF2-7C25-1E26-BF96CCFB40DB">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:29:27 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LUGAR" id="FC3A4943-C0A2-4C44-CFEF-8029D55398BC">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:31:19 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRECIO_ENTRADA" id="C21B69C2-605B-1CA6-2C87-0EDDEE6D9CD7">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:14:52 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RECAUDACION" id="A0811A4C-795E-D761-6606-899C5441778D">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:31:35 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OBJETIVO_RECAUDACION" id="CA209553-4B7E-A4D3-E4E1-D3F4603044D5">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:32:13 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ESTADO" id="C987C309-A8FF-2806-A893-2061A971534D">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:32:53 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ES_NUMERADO" id="0FCAEB86-7282-140C-1619-96B14461F34A">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:33:58 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ES_NOMINATIVO" id="982219AE-E1F0-E326-96AE-83B0342A8AFD">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:35:39 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E1F331A8-B4F0-5F52-64D4-3F36AD42ABAA" name="EVENTO PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:28:44 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E4964331-99AB-239A-FD8E-D3A31ECD69DF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

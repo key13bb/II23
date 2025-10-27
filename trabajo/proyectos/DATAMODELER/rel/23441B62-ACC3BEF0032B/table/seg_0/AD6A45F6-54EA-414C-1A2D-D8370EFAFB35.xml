@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AD6A45F6-54EA-414C-1A2D-D8370EFAFB35" name="USUARIO">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>10258F15-2F22-6EEF-60CC-6B5CF037E477</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CORREO" id="0AEECE41-0D84-3C2D-C5CD-149A58D28210">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>39EBD0AA-5E57-E38B-2F48-402ADD054549</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C5229588-327D-6464-8656-F0CEC0E09D92" referredColumn="14CCF477-4F31-18D4-B46A-8C41291C8516"/>
+</associations>
+</Column>
+<Column name="DIRECCION" id="3E7ABBE0-7ECC-BA5A-0655-38E40D1758E4">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>58BE89B5-C6EC-F87A-3A53-E224E8B28CC9</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HASH_PASSWORD" id="FC487C2F-8C23-6085-949B-8880918A10DD">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>98559EE2-5636-73D4-3E25-4604AF65A4E5</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMUNICACIONES" id="D3088129-215D-5B85-648A-E19392804550">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>A23A660C-BBCF-7A06-FA2B-CD84685EEDC1</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A9E398A7-394F-319F-31FF-6ED592D0CDF0" name="USUARIO_PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>2E850212-DD40-F5B3-8AF5-5A3CFA518183</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AEECE41-0D84-3C2D-C5CD-149A58D28210"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01F53813-4BE0-8089-0A0F-702163C85C65" name="USUARIO_PERSONA_FK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>3929B6FB-AE6A-345A-B2F4-40F5AB672A21</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AEECE41-0D84-3C2D-C5CD-149A58D28210"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

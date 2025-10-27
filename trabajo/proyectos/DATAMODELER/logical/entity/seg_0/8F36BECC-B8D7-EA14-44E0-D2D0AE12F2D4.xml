@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F36BECC-B8D7-EA14-44E0-D2D0AE12F2D4" name="PATROCINADOR">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:42:41 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="E9393296-DD04-189B-75BA-9B475FF303A4">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:45:39 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="EC12884A-1006-1263-3939-734ECC9EB9FD">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:42:49 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CORREO" id="328402AA-CC4C-A57C-4BCE-6BB25C9DE3CB">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:46:12 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TELEFONO" id="33F2724F-68E3-87FC-738E-E37FD7DB5B1F">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:46:47 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D047C9C8-4E89-45CC-D3FF-94AFB4A7F989" name="PATROCINADOR PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:45:41 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E9393296-DD04-189B-75BA-9B475FF303A4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

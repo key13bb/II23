@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9A378075-816F-96C6-2AE4-214C6CFC9294" name="PERSONA">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>0732B1E8-034D-AAE3-F482-C189BEBE9D14</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CORREO" id="39EBD0AA-5E57-E38B-2F48-402ADD054549">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>14CCF477-4F31-18D4-B46A-8C41291C8516</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TELEFONO" id="347D2962-B770-0A45-C8CE-8CF80A3E4D51">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>0129E8A0-7BB3-AFB2-5DCD-A621CB8ABE71</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DNI" id="0E763875-E075-0000-AFB2-6EE6BBAF4032">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>F21B2516-D9C4-C5AD-763C-74106151F0C3</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="3E230678-6F28-0C36-E537-2CBE74638E34">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>39F41B2B-131E-6339-4108-6EF0FD9856FE</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="APELLIDO1" id="50299455-4CD0-B20F-C9CF-48845E96351B">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>56BD5A3B-6753-AE3C-7E75-A086B4F30D08</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="APELLIDO2" id="F6908C62-B8D6-C92D-5680-0A4C3C17A0B4">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>CE33458B-8649-EB2F-EF53-F370CC373385</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2E850212-DD40-F5B3-8AF5-5A3CFA518183" name="USSUARIO PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:23:20 UTC</createdTime>
+<generatorID>291DBD11-CFA5-1793-6F5C-1391215CFA57</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>39EBD0AA-5E57-E38B-2F48-402ADD054549</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

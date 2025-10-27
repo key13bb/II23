@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09E046A6-AEB0-593C-960B-12C9E5494B96" name="PATROCINADOR">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>8F36BECC-B8D7-EA14-44E0-D2D0AE12F2D4</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="103DE96A-EE67-BA60-A1E0-D843561402CA">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>E9393296-DD04-189B-75BA-9B475FF303A4</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="96696B41-FA51-4C77-FAF3-76217A4C60FF">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>EC12884A-1006-1263-3939-734ECC9EB9FD</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO" id="16C7FD91-709F-967E-D688-B4364DECCF50">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>328402AA-CC4C-A57C-4BCE-6BB25C9DE3CB</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONO" id="B8E3E463-2223-7C95-DE7B-7558655F4EDC">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>33F2724F-68E3-87FC-738E-E37FD7DB5B1F</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29449FD9-556F-5A2C-8AE1-7F3F7708964D" name="PATROCINADOR_PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>D047C9C8-4E89-45CC-D3FF-94AFB4A7F989</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="103DE96A-EE67-BA60-A1E0-D843561402CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

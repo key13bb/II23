@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EVENTOS_PATROCINADOS" directorySegmentName="seg_0" id="AA3C1763-5A60-BA29-FA4A-2D792206FEE9">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 07:47:56 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<engineerTo>
+<item key="23441B62-DD0D-C31A-E2B2-ACC3BEF0032B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>8F36BECC-B8D7-EA14-44E0-D2D0AE12F2D4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5CCAACB6-3809-3C63-6C48-8FFFE8ADD8C6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

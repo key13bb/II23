@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4594B6F5-C367-C5C0-5D83-C16B9028A25A" name="ENTRADA">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>2F5C6498-36C4-B585-E179-065EEA0BEF50</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EVENTO" id="DA147022-8769-A0E8-8015-277B9FD287AB">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>E42788A9-8B78-4F5A-E55B-FE9D50346EB1</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERSONA" id="B526A54F-2D8F-381E-10FB-9366207A0571">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>428BAE4A-1DB3-3C2A-12A3-862344FA1594</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUM_ENTRADA" id="6632F96D-A6E0-E428-1DF2-C3C13F618149">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>A0A73786-AC0E-C3E5-19FB-FB3CBBD1EF75</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EVENTO_ID_EVENTO" id="7BEDD18F-3A7B-772E-AFD1-574FE5B23AB8">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>2B2E654D-E4B5-2CE6-1261-944D07473520</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FFAE0555-A462-DC12-372F-6DF9833AF169" referredColumn="31D55284-E004-9EFD-9459-CE9E0B94EEDC"/>
+</associations>
+</Column>
+<Column name="PERSONA_CORREO" id="C7AB42C7-33CE-6625-517F-60FF73A61276">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>01C1B732-2B40-B4DD-7B7F-8B1FBABE67F8</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D4C4E47C-B70B-6DA7-0BCF-BA65796A496A" referredColumn="14CCF477-4F31-18D4-B46A-8C41291C8516"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F52A478-DA9C-DF27-1C39-A62C3EA3D127" name="ENTRADA_PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>EE9ED901-C0FD-4B0B-D309-A74FF677D09F</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6632F96D-A6E0-E428-1DF2-C3C13F618149"/>
+<colUsage columnID="B526A54F-2D8F-381E-10FB-9366207A0571"/>
+<colUsage columnID="DA147022-8769-A0E8-8015-277B9FD287AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF1963E9-708A-C535-6CC3-4C8D6FFD5CE8" name="ENTRADA_EVENTO_FK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>6423B098-BFAF-37E6-AD49-A6964ED068AE</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BEDD18F-3A7B-772E-AFD1-574FE5B23AB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A71663C-A381-9F0D-5607-7A4ECEEC5E9A" name="ENTRADA_PERSONA_FK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>0777580E-4A1B-F09C-FB40-91003414AFF4</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7AB42C7-33CE-6625-517F-60FF73A61276"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

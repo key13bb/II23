@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="89FC07C4-CFF6-7343-D8A2-B04592818B7D" containerWithKeyObject="281A58EB-A2CE-472F-10E1-79A9EC665334" localFKIndex="EFA7AD22-EB90-087B-D5B8-B41B1B1B9355" name="EVENTOS_PATROCINADOS_PATROCINADOR_FK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>AA3C1763-5A60-BA29-FA4A-2D792206FEE9</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<referredTableLongName>PATROCINADOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>09E046A6-AEB0-593C-960B-12C9E5494B96</referredTableID>
+<keyObject>29449FD9-556F-5A2C-8AE1-7F3F7708964D</keyObject>
+<referredKeyID>29449FD9-556F-5A2C-8AE1-7F3F7708964D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

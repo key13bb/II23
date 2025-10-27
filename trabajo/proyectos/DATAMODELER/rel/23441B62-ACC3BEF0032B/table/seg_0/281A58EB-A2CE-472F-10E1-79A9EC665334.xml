@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="281A58EB-A2CE-472F-10E1-79A9EC665334" name="EVENTOS_PATROCINADOS">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PATROCINADOR_ID" id="DD7F538A-6CEC-5C9D-7900-DD23E39816D7">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89FC07C4-CFF6-7343-D8A2-B04592818B7D" referredColumn="103DE96A-EE67-BA60-A1E0-D843561402CA"/>
+</associations>
+</Column>
+<Column name="EVENTO_ID_EVENTO" id="E0C85CF4-32BC-13BC-576B-9A175E1DFB53">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="641E842E-2AC0-7C73-61E4-74AE3DE86CF9" referredColumn="31D55284-E004-9EFD-9459-CE9E0B94EEDC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EEB6A177-2D21-D2DF-3A40-E27819465F25" name="EVENTOS_PATROCINADOS_PK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD7F538A-6CEC-5C9D-7900-DD23E39816D7"/>
+<colUsage columnID="E0C85CF4-32BC-13BC-576B-9A175E1DFB53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EFA7AD22-EB90-087B-D5B8-B41B1B1B9355" name="EVENTOS_PATROCINADOS_PATROCINADOR_FK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>AA3C1763-5A60-BA29-FA4A-2D792206FEE9</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD7F538A-6CEC-5C9D-7900-DD23E39816D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B2C3E51-51EF-2A04-4657-FD23B3A130A4" name="EVENTOS_PATROCINADOS_EVENTO_FK">
+<createdBy>key13bb</createdBy>
+<createdTime>2025-10-21 08:16:51 UTC</createdTime>
+<generatorID>AA3C1763-5A60-BA29-FA4A-2D792206FEE9</generatorID>
+<ownerDesignName>DATAMODELER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0C85CF4-32BC-13BC-576B-9A175E1DFB53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
