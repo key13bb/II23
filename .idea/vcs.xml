@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/1.1/MDIS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/1.1/OEMP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/1.2/IISO" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/1.2/TCOM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2.1/BDAT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2.1/ECOM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2.2/FIAR" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2.2/RSER" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2.2/SOPE" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2.2/TALF" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.1/ADAP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.1/ADAP/trabajo/proyectos/Cudeca" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.1/CSIN" vcs="Git" />
+  </component>
+</project>
