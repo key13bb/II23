@@ -1,0 +1,104 @@
+SET SERVEROUTPUT ON;
+
+CREATE TABLE "TABLAS" (
+    propietario VARCHAR2(128) NOT NULL,
+    nombre VARCHAR2(128) NOT NULL
+);
+
+CREATE OR REPLACE PROCEDURE PR_RECORRE_1 IS
+    CURSOR KEYCURSOR IS 
+        SELECT OWNER, TABLE_NAME 
+        FROM ALL_TABLES 
+        WHERE OWNER = USER;
+        
+    v_owner ALL_TABLES.OWNER%TYPE;
+    v_name  ALL_TABLES.TABLE_NAME%TYPE;
+BEGIN
+    OPEN KEYCURSOR;
+    LOOP
+        FETCH KEYCURSOR INTO v_owner, v_name;
+        EXIT WHEN KEYCURSOR%NOTFOUND;
+        
+        INSERT INTO TABLAS (propietario, nombre) VALUES (v_owner, v_name);
+    END LOOP;
+    CLOSE KEYCURSOR;
+    
+    COMMIT;
+END PR_RECORRE_1;
+/
+
+
+CREATE OR REPLACE PROCEDURE PR_RECORRE_2 IS
+    CURSOR KEYCURSOR IS 
+        SELECT OWNER, TABLE_NAME
+        FROM ALL_TABLES;
+BEGIN
+    FOR V_OBJECT IN KEYCURSOR LOOP
+        INSERT INTO TABLAS VALUES (V_OBJECT.OWNER, V_OBJECT.TABLE_NAME);
+    END LOOP;
+    COMMIT;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE PR_RECORRE_3(P_MODE IN NUMBER DEFAULT NULL) IS
+    CURSOR KEYCURSOR (P_FILTER NUMBER) IS 
+        SELECT OWNER, TABLE_NAME
+        FROM ALL_TABLES
+        WHERE OWNER = DECODE(P_FILTER, 0, OWNER, USER);
+BEGIN
+    IF P_MODE IS NULL THEN
+        INSERT INTO TABLAS VALUES ('ERROR', 'SE DEBE PROPORCIONAR UN VALOR EN P_MODE');
+    ELSE
+        FOR V_OBJECT IN KEYCURSOR(P_MODE) LOOP
+            INSERT INTO TABLAS VALUES (V_OBJECT.OWNER, V_OBJECT.TABLE_NAME);
+        END LOOP;
+    END IF;
+    COMMIT;
+END;
+/
+
+BEGIN
+evaluar_procedimiento('PR_RECORRE_1');
+evaluar_procedimiento('PR_RECORRE_2');
+evaluar_procedimiento('PR_RECORRE_3');
+END;
+/
+
+BEGIN
+evaluar_procedimiento('PR_RECORRE_1', 'Miau');
+evaluar_procedimiento('PR_RECORRE_2', 'Miau');
+evaluar_procedimiento('PR_RECORRE_3', 'Miau');
+END;
+/
+
+CREATE OR REPLACE FUNCTION F_PUNTUACION_GRUPO(P_GRUPO IN VARCHAR2) RETURN NUMBER IS
+    v_total_puntos NUMBER := 0;
+    v_puntos_fila  NUMBER;
+    CURSOR KEYCURSOR IS 
+        SELECT PUNTOS 
+        FROM ESC.EJECUCIONES 
+        WHERE GRUPO = P_GRUPO;
+BEGIN
+    FOR v_registro IN KEYCURSOR LOOP
+        v_total_puntos := v_total_puntos + v_registro.PUNTOS;
+    END LOOP;
+    RETURN v_total_puntos;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE P_MUESTRA_GRUPOS IS
+    CURSOR KEYCURSOR IS 
+        SELECT GRUPO, SUM(PUNTOS) AS TOTAL
+        FROM ESC.EJECUCIONES 
+        GROUP BY GRUPO;
+    -- ¡Fuera variables sueltas!
+BEGIN
+    FOR v_grupos IN KEYCURSOR LOOP
+        -- Usamos v_grupos.GRUPO y v_grupos.TOTAL
+        DBMS_OUTPUT.PUT_LINE('Grupo: ' || NVL(v_grupos.GRUPO, 'SIN NOMBRE') || ' -> Puntos Totales: ' || v_grupos.TOTAL);
+    END LOOP;
+END;
+/
+
+
+    
